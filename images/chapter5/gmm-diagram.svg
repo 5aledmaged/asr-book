@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 180.68059 52.916664"
+   height="199.99998"
+   width="682.88727">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4594" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker4913"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4911" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4597" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4600" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-3"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4594-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-2"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4594-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-3-2"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4594-5-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-3-8"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4594-5-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend-3-8-3"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path4594-5-9-6" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-7.0645535,-111.79166)"
+     id="layer1">
+    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,2.3892131,-1.8546736)"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot10"
+       xml:space="preserve"><flowRegion
+         id="flowRegion12"><rect
+           y="558.94824"
+           x="17.142857"
+           height="108.57143"
+           width="203.57143"
+           id="rect14" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+         id="flowPara16">speech</flowPara></flowRoot>    <rect
+       y="145.01714"
+       x="26.610893"
+       height="19.538631"
+       width="39.382381"
+       id="rect18"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.30511853" />
+    <rect
+       y="145.01714"
+       x="79.527557"
+       height="19.538631"
+       width="39.382378"
+       id="rect18-7"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.30511853" />
+    <rect
+       y="145.01714"
+       x="132.44423"
+       height="19.538631"
+       width="39.382378"
+       id="rect18-7-5"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.30511853" />
+    <path
+       id="path89"
+       d="M 17.859375,158.7552 Z"
+       style="fill:#000000;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       id="path91"
+       d="M 25.988404,154.18078 H 13.229166 Z"
+       style="fill:none;stroke:#000000;stroke-width:0.23853454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
+    <path
+       id="path91-6"
+       d="M 131.82173,153.57511 H 119.0625 Z"
+       style="fill:none;stroke:#000000;stroke-width:0.23853454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3)" />
+    <path
+       id="path91-1"
+       d="M 78.905072,153.57511 H 66.145834 Z"
+       style="fill:none;stroke:#000000;stroke-width:0.23853454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-2)" />
+    <path
+       id="path91-6-0"
+       d="M 184.7384,153.57511 H 171.97917 Z"
+       style="fill:none;stroke:#000000;stroke-width:0.23853454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-2)" />
+    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,21.913474,2.2081815)"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot10-9"
+       xml:space="preserve"><flowRegion
+         id="flowRegion12-3"><rect
+           y="558.94824"
+           x="17.142857"
+           height="54.648952"
+           width="149.45795"
+           id="rect14-6" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle"
+         id="flowPara16-0">preprocessing</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,66.638201,0.60456362)"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot10-9-6"
+       xml:space="preserve"><flowRegion
+         id="flowRegion12-3-2"><rect
+           y="558.94824"
+           x="17.142857"
+           height="108.57143"
+           width="203.57143"
+           id="rect14-6-6" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle"
+         id="flowPara16-0-1">feature</flowPara><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle"
+         id="flowPara6275">extraction</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,119.33857,1.0417368)"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot10-9-6-8"
+       xml:space="preserve"><flowRegion
+         id="flowRegion12-3-2-7"><rect
+           y="558.94824"
+           x="17.142857"
+           height="108.57143"
+           width="203.57143"
+           id="rect14-6-6-9" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle"
+         id="flowPara6275-0">GMM based</flowPara><flowPara
+         id="flowPara6306"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle">recognition</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,171.31714,-1.5335923)"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot10-2"
+       xml:space="preserve"><flowRegion
+         id="flowRegion12-37"><rect
+           y="558.94824"
+           x="17.142857"
+           height="108.57143"
+           width="203.57143"
+           id="rect14-5" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+         id="flowPara6332">results</flowPara></flowRoot>    <rect
+       y="111.94422"
+       x="132.44421"
+       height="19.538631"
+       width="39.382378"
+       id="rect18-7-5-2"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.30511853" />
+    <rect
+       y="111.94422"
+       x="79.527557"
+       height="19.538631"
+       width="39.382378"
+       id="rect18-7-5-2-2"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.30511853" />
+    <path
+       id="path91-6-7"
+       d="M 131.82173,120.5022 H 119.0625 Z"
+       style="fill:none;stroke:#000000;stroke-width:0.23853454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-8)" />
+    <path
+       id="path91-6-7-1"
+       d="M 153.34675,144.40149 V 131.64226 Z"
+       style="fill:none;stroke:#000000;stroke-width:0.23853454;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-3-8-3)" />
+    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,67.755553,-32.366954)"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot10-9-6-2"
+       xml:space="preserve"><flowRegion
+         id="flowRegion12-3-2-9"><rect
+           y="558.94824"
+           x="17.142857"
+           height="108.57143"
+           width="203.57143"
+           id="rect14-6-6-3" /></flowRegion><flowPara
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle"
+         id="flowPara6275-9">GMM</flowPara><flowPara
+         id="flowPara7419"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle">training</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,120.47793,-32.814473)"
+       style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot10-9-6-2-4"
+       xml:space="preserve"><flowRegion
+         id="flowRegion12-3-2-9-7"><rect
+           y="558.94824"
+           x="17.142857"
+           height="108.57143"
+           width="203.57143"
+           id="rect14-6-6-3-8" /></flowRegion><flowPara
+         id="flowPara7419-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle">Gaussian</flowPara><flowPara
+         id="flowPara7450"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle">Mixture Models</flowPara></flowRoot>  </g>
+</svg>
