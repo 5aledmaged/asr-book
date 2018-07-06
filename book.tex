@@ -64,7 +64,7 @@
 \end{titlepage}
 
 \begin{abstract}
-Abstract goes here...
+Speech is the way of communication between the human. It also defined as it is a process which automatically recognizes the spoken words of person based on given speech signal information. It is also known as Automatic Speech Recognition or computer speech recognition and speech to text conversion. Automatic speech recognition is the very interesting area of research and lots of research work has been done by number of researchers. To recognize the speech feature extraction and word recognition these two steps are followed. After feature extraction feature matching is performed for word recognition. This project describe the different feature extractions techniques like MFCC and DWT (combined with LPC) and pattern recognition which is done by using 4 different techniques like neural network (NN), hidden markov model (HMM), gaussian mixture model (GMM) and dynamic time warping (DTW).
 \end{abstract}
 
 \printglossary[type=\acronymtype]
@@ -103,7 +103,7 @@ Speaker independent systems are designed for variety of speakers. It recognizes 
 \end{enumerate}
 \subsection{Size of Vocabulary}
 The size of vocabulary of a speech recognition system affects the complexity, processing requirements and the accuracy of the system. Some applications only require a few words (e.g. numbers only), others require very large dictionaries. In \acrshort{asr} systems the types of vocabularies can be classified as follows.
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 \item Small vocabulary - tens of words
 \item Medium vocabulary - hundreds of words
 \item Large vocabulary - thousands of words
@@ -111,10 +111,10 @@ The size of vocabulary of a speech recognition system affects the complexity, pr
 \item Out-of-Vocabulary- Mapping a word from the vocabulary into the unknown word.
 \end{enumerate}
 \section{Speech Recognition Process}
-
-\begin{figure}[ht]
+In basic speech recognition process, shown in Figure \ref{fig:chapter1}, the speech signal is given as an input for the system. Next, the signal is divided into smaller frames where the useful feature vectors are extracted. Then, these feature vectors are divided into training and testing features. From the training features the speech model has been developed. During testing process, the pattern matching analysis will be done against the reference features which are stored in the speech database. Finally, decision will be taken based on the best match.
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[]
 	{images/chapter1/chapter1}
 	\caption{general speech recognition system.}
 	\label{fig:chapter1}
@@ -136,20 +136,20 @@ Once a voice sample has been converted to a series of feature vectors it can be 
 This project is about speech recognition for an automated system, which is considered one of the most important technologies in the last years.
 \par
 Speech recognition is done based on several stages first of all, we have to record our certain words that we want our system to recognize. After that we will use silence remove technique to control the start of our words, that's all is called preprocessing. Then we have to extract certain number of feature coefficients from each word. This process is called feature extraction which we make it using three different techniques:
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 \item Mel Frequency Cepstral Coefficient (\acrshort{mfcc})
 \item Discrete Wavelet Transform (\acrshort{dwt})
 \item Linear Predictive Coding (\acrshort{lpc})
 \end{enumerate}
 The next stage is known is decision making and pattern recognition which is done by using 4 different techniques:
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 \item Neural Network (\acrshort{nn})
 \item Hidden Markov Model (HMM)
 \item \acrfull{gmm}
 \item Dynamic Time warping (\acrshort{dtw})
 \end{enumerate}
-The next stage is to develop a complete system based on these feature extraction methods and these decision-making methods and to compare between several combinations of them from accuracy point of view. The basic combinations we use:
-\begin{enumerate}
+The next stage is to develop a complete system based on these feature extraction and classification methods. The basic combinations we use:
+\begin{enumerate}[noitemsep]
 \item Isolated Word Recognition using \acrshort{dwt}, \acrshort{lpc} and \acrlong{nn}.
 \item Isolated Word Recognition using \acrshort{mfcc} and \acrlong{nn}.
 \item Isolated Word Recognition using \acrshort{mfcc} and \acrshort{gmm}.
@@ -158,16 +158,17 @@ The next stage is to develop a complete system based on these feature extraction
 \end{enumerate}
 In this project, we use several words which we take into consideration, which are commonly used in different automated systems.
 List of automated systems that we are concerned about:
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 \item Dial up system.
 \item Automated car.
 \item Smart home.
 \end{enumerate}
 \section*{References}
-\begin{enumerate}
-\item K. H. Davis, R. Biddulph, and S. Balashek, ”Automatic Recognition of Spoken Digits,” 
+\begin{enumerate}[label=(\arabic*), noitemsep]
+\item K. H. Davis, R. Biddulph, and S. Balashek, ``Automatic Recognition of Spoken Digits,'' 
 J. Acoust.
 \item Rabiner, L.R., Juang, B.H. Fundamentals of Speech Recognition, Prentice-Hall, NJ (1993).
+\item Vimala. ``Suitable Feature Extraction and Speech Recognition Technique for Isolated Tamil Spoken Words.'' (2014)
 \item Hofmann,Y.H, Speech recognition for human computer Interaction (2009).
 \end{enumerate}
 
@@ -351,7 +352,7 @@ In this chapter we discuss the mechanics of producing and perceiving speech in h
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.5\textwidth]
 	{images/chapter2/human-speech-prod}
 	\caption{human speech production system.}
 	\label{fig:human-speech-prod}
@@ -361,37 +362,36 @@ The speech process starts when air is expelled from the lungs by muscular force 
 
 \subsubsection{II. Source-Filter Theory of Speech Production}
 
-This model of sound production assumes a source of sound and a filter that shapes that sound, organized so that the source and the filter are independent. This independence allows us to measure and quantify the source separately from the filter (this model also used in LPC analysis discussed in chapter 3).The lungs provide a stream of air, here modelled as the power supply (shown in figure \ref{fig:simple-model-voice-gen}). This stream is then modulated via the vocal folds into three different wave forms:
-\begin{itemize}
-\item Periodic puffs are responsible for periodic sounds as in $/a/$ or $/o/$. This is generated by the closing of the vocal folds, which then leads to an increase in pressure resulting in a forced opening of the folds and thus again to a decrease in pressure. The vocal folds can close again and the cycle is repeated periodically.
-\item Noise occurs when the air stream is directed over halve closed vocal folds. This generates the fricative sounds as in $/f/$ or $/s/$.
-\item An impulse is generated similarly to the periodic puffs, but will only involve a single period of the cycle. This leads to the plosive sounds $/p/$, $/t/$, etc.
-\end{itemize}
-
-\begin{figure}[ht]
+This model of sound production assumes a source of sound and a filter that shapes that sound, organized so that the source and the filter are independent. This independence allows us to measure and quantify the source separately from the filter (this model also used in LPC analysis discussed in chapter 3).The lungs provide a stream of air, here modelled as the power supply, shown in figure \ref{fig:simple-model-voice-gen}. This stream is then modulated via the vocal folds into three different wave forms:
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.5\textwidth]
 	{images/chapter2/simple-model-voice-gen}
 	\caption{simplified model of voice generation in human body.}
 	\label{fig:simple-model-voice-gen}
 \end{figure}
 
+\begin{itemize}[noitemsep]
+\item Periodic puffs are responsible for periodic sounds as in $/a/$ or $/o/$. This is generated by the closing of the vocal folds, which then leads to an increase in pressure resulting in a forced opening of the folds and thus again to a decrease in pressure. The vocal folds can close again and the cycle is repeated periodically.
+\item Noise occurs when the air stream is directed over halve closed vocal folds. This generates the fricative sounds as in $/f/$ or $/s/$.
+\item An impulse is generated similarly to the periodic puffs, but will only involve a single period of the cycle. This leads to the plosive sounds $/p/$, $/t/$, etc.
+\end{itemize}
 This source signal will then propagate through the vocal tract which consists of the throat, the nasal and the oral cavity. This tract will act as a sort of filter that changes and distorts the source, seen in figure \ref{fig:discrete-speech-model}. This happens mainly through resonance and reflections and depends on the shape of the vocal tract. During speaking this shape will change continuously which thus changes the behaviour of the filter.
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.6\textwidth]
 	{images/chapter2/discrete-speech-model}
 	\caption{discrete-time speech production model.}
 	\label{fig:discrete-speech-model}
 \end{figure}
 
 \subsubsection{III. Fundamental Frequency}
-The fundamental frequency, often referred to simply as the fundamental, is defined as the lowest frequency of a periodic waveform (figure \ref{fig:fund-freq-speech}).
+The fundamental frequency, often referred to simply as the fundamental, is defined as the lowest frequency of a periodic waveform shown in figure \ref{fig:fund-freq-speech}.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.6\textwidth]
 	{images/chapter2/fund-freq-speech}
 	\caption{fundamental frequency of speech signal.}
 	\label{fig:fund-freq-speech}
@@ -402,21 +402,21 @@ The fundamental frequency is a measure of how high or low the frequency of a per
 A typical adult male will have a fundamental frequency of from 85 to 155Hz, and that of a typical adult female from 165 to 255Hz. Children and babies have even higher fundamental frequencies. Infants show a range of 250 to 650Hz, and in some cases go over 1000Hz. A 10-year-old boy or girl might have a fundamental frequency around 400Hz.
 
 \subsubsection{IV. Formant Frequencies}
-The term formant refers to peaks in the harmonic spectrum of a complex sound. Because of their resonant origin, they tend to stay essentially the same when the frequency of the fundamental is changed. There are several formants, each at a different frequency, roughly one in each 1000Hz band. Or, to put it differently, formants occur at roughly 1000Hz intervals. Each formant corresponds to a resonance in the vocal tract (figure \ref{fig:vocal-tract-vowel}).
+The term formant refers to peaks in the harmonic spectrum of a complex sound. Because of their resonant origin, they tend to stay essentially the same when the frequency of the fundamental is changed. There are several formants, each at a different frequency, roughly one in each 1000Hz band. Or, to put it differently, formants occur at roughly 1000Hz intervals. Each formant corresponds to a resonance in the vocal tract as shown in figure \ref{fig:vocal-tract-vowel}.
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.5\textwidth]
 	{images/chapter2/vocal-tract-vowel}
 	\caption{Vocal tract configurations of three different vowels.}
 	\label{fig:vocal-tract-vowel}
 \end{figure}
 
-Formants are particularly important because they are essential components in the intelligibility of speech. For example, the distinguish-ability of the vowel sounds can be attributed to the differences in their first three formant frequencies. Producing different vowel sounds amounts to retuning these formants within a general range of frequencies.
+Formants are particularly important because they are essential components in the intelligibility of speech. For example, the distinguish-ability of the vowel sounds can be attributed to the differences in their first three formant frequencies. Producing different vowel sounds amounts to retuning these formants within a general range of frequencies. The relation between formants frequencies and source filter theory is described in figure \ref{fig:formant-time-freq}.
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.6\textwidth]
 	{images/chapter2/formant-time-freq}
 	\caption{Formants shaping speech in time and frequency domains.}
 	\label{fig:formant-time-freq}
@@ -426,16 +426,16 @@ Formants are particularly important because they are essential components in the
 The speech signal is a slowly time varying signal in the sense that, when examined over a sufficiently short period of time (between 5 and 100ms), its characteristics are fairly stationary; however, over long periods of time (on the order of 1/5 seconds or more) the signal characteristics change to reflect the different speech sounds being spoken. There are several ways of classifying (labelling) events in speech. Perhaps the simplest and most straightforward is via the state of the source of speech production-the vocal cords.
 \par 
 There are several ways of classifying (labelling) events in speech. Perhaps the simplest and most straightforward is via the state of the source of speech production-the vocal cords. It is an accepted convention to use a three-state representation in which the states are:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item Silence (S):  where no speech is produced.
 \item Unvoiced (U): in which the vocal cords are not vibrating, so the resulting speech waveform is aperiodic or random in nature.
 \item Voiced (V): in which the vocal cords are tensed and therefore vibrate periodically when air flows from the lungs, so the resulting speech waveform is quasi-periodic.
 \end{itemize}
 The result of applying this type of classification to a speech signal is shown in Figure \ref{fig:wave-utterance-speech}.
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.55\textwidth]
 	{images/chapter2/wave-utterance-speech}
 	\caption{Waveform of the utterance ``speech''.}
 	\label{fig:wave-utterance-speech}
@@ -445,7 +445,7 @@ The result of applying this type of classification to a speech signal is shown i
 An alternative way of characterizing the speech signal and representing the information associated with the sounds is via a spectral representation. Perhaps the most popular representation of this type is the sound spectrogram (Figure \ref{fig:freq-three-formants}) in which a three-dimensional representation of the speech intensity, in different frequency bands on the y-axis, over time represented on the x-axis. Intensity is depicted by the relative darkness of the frequencies shown. The formants (resonant frequencies; the loudest) are the darker bands that correspond to the peaks in the spectrogram.
 
 \subsection{Speech Sounds and Features}
-Despite the inherent variance in producing speech sounds, linguists categorize speech sounds (or phones) in a language into units that are linguistically distinct, known as phonemes. There are about 45 phonemes in English. The sounds of a language (phonemes and phonetic variations) are represented by symbols from an alphabet. The most known and long-standing alphabet is the International Phonetic Alphabet (\acrshort{ipa}).
+Despite the inherent variance in producing speech sounds, linguists categorize speech sounds (or phones) in a language into units that are linguistically distinct, known as phonemes. There are about 45 phonemes in English. The sounds of a language (phonemes and phonetic variations) are represented by symbols from an alphabet. The most known and long-standing alphabet is the International Phonetic Alphabet (\acrshort{ipa}), shown in appendix B.
 \par
 The set of phonemes can be classified into vowels and consonants. Consonant sound is one in which the air flow is cut off, either partially or completely, when the sound is produced. Vowel sound is one in which the air flow is unobstructed when the sound is made.
 \subsubsection{I. Vowels}
@@ -453,7 +453,7 @@ The vowel sounds are perhaps the most interesting class of sounds in English. Th
 \par
 The vowels are generally long in duration (as compared to consonant sounds) and are spectrally well defined. As such they are usually easily and reliably recognized and therefore contribute significantly to our ability to recognize speech, both by human beings and by machine.
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]
 	{images/chapter2/freq-three-formants}
@@ -476,12 +476,12 @@ An affricate is a consonant that begins as a plosive and releases as a fricative
 It also begins with a complete obstruction of the oral cavity, but with the velum open so that air passes freely through the nasal cavity. The shape and position of the tongue determine the resonant cavity that gives different nasal stops their characteristic sounds. Examples of BP phonemes include $/m n N/$, all voiced.
 \end{itemize}
 
-\section{Pre-processing Concept}
-The human voice is recorded and digitized. Then it is input to the pre-processing stage. The main task of this stage is to separate out the unvoiced speech samples from the voiced speech samples. The detection of voiced and unvoiced speech can be done on the basis of calculating energy and zero crossing rates frame by frame basis.
+\section{Pre-processing}
+The main task of the preprocessing block shown in figure \ref{fig:general-pre-steps} is to separate out the unvoiced speech samples from the voiced speech samples. The detection of voiced and unvoiced speech can be done on the basis of calculating energy and zero crossing rates frame by frame basis.
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[]
 	{images/chapter2/general-pre-steps}
 	\caption{General steps of the preprocessing stage.}
 	\label{fig:general-pre-steps}
@@ -489,93 +489,80 @@ The human voice is recorded and digitized. Then it is input to the pre-processin
 
 In order that a computer is able to process the speech signal, it first has to be digitized. Therefore, the time-continuous speech signal is sampled and quantized. The result is a time- and value-discrete signal. According to the Nyquist-Shannon sampling theorem a time-continuous signal that is band limited to a certain finite frequency $F_{max}$ needs to be sampled with a sampling frequency of at least $2F_{max}$. Since human speech has a relatively low bandwidth (mostly between 100Hz and 8KHz) a sampling frequency of 44.1KHz is sufficient for speech recognition tasks.
 
-\subsection{Windowing and frame formation}
-Speech is a non-stationary time variant signal, because a signal is considered to be stationary if its frequency or spectral components do not change over time. parameter estimation methods require stationary signals Thus dividing the signal into shorter segments (segments, micro-segments, frames) within which the signal behaves (we hope) as stationary.
-\par
-In order to obtain frames, we multiply the speech signal with a windowing function.
-
-\begin{equation*}
-X(f) = S(f) W(f)
-\end{equation*}
-
+\subsection{Framing and Windowing}
+Speech is a non-stationary time variant signal, because a signal is considered to be stationary if its frequency or spectral components do not change over time. parameter estimation methods require stationary signals Thus dividing the signal into shorter segments (segments, micro-segments, frames) within which the signal behaves (we hope) as stationary. In order to obtain frames, we multiply the speech signal with a windowing function.
+\begin{equation}
+x(n) = s(n) w(n)
+\end{equation}
 \subsection{Frame Length}
 Frame length must be short enough to assume the signal (within the given length) is stationary, but long enough to provide accurate estimation of the desired parameters (features).
 
 \subsection{Number of frames per segment of the length N}
-
-• In case of No overlap, pram = 0
-
-\begin{figure}[ht]
+In case of No overlap as in \ref{fig:frame-wo-overlap}, pram = 0
+\begin{equation}
+N_{ram} = \left \lfloor \frac{N}{l_{ram}} \right \rfloor
+\end{equation}
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.6\textwidth]
 	{images/chapter2/frame-wo-overlap}
 	\caption{Framing without overlapping.}
 	\label{fig:frame-wo-overlap}
 \end{figure}
 
-\begin{equation*}
-N_{ram} = \left \lfloor \frac{N}{l_{ram}} \right \rfloor
-\end{equation*}
-
-• In case of overlap, pram ≠ 0
-
-\begin{figure}[ht]
+In case of overlap as in figure \ref{fig:frame-overlap}, pram $\neq$ 0
+\begin{equation}
+N_{ram} = 1 + \left \lfloor \frac{N - l_{ram}}{s_{ram}} \right \rfloor 
+\end{equation}
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.6\textwidth]
 	{images/chapter2/frame-overlap}
 	\caption{Framing with overlapping.}
 	\label{fig:frame-overlap}
 \end{figure}
 
-\begin{equation*}
-N_{ram} = \left \lfloor \frac{N}{l_{ram}} \right \rfloor
-\end{equation*}
-
 \subsection{Select a frame of a signal using a window - windowing function}
-\begin{itemize}
-\item Rectangular: no change of the signal, selection only.
-\begin{equation*}
+\begin{itemize}[noitemsep]
+\item Rectangular as shown in figure \ref{fig:rect-freq-time}: no change of the signal, selection only.
+\begin{equation}
 w(n) =
 \begin{cases}
 1, & 0 \leq n \leq l_{rem} -1 \\
 0, & \text{otherwise}
 \end{cases}
-\end{equation*}
-\item Hamming: suppresses the signal at the sides of the window, selection and weighting.
-\begin{equation*}
+\end{equation}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]
+	{images/chapter2/rect-freq-time}
+	\caption{Rectangular window in time and frequency.}
+	\label{fig:rect-freq-time}
+\end{figure}
+
+\item Hamming as shown in figure \ref{fig:hamm-freq-time}: suppresses the signal at the sides of the window, selection and weighting.
+\begin{equation}
 w(n) =
 \begin{cases}
 0.54 - 0.46 \cos \frac{2 \pi n}{l_{rem} - 1}, & 0 \leq n \leq l_{rem} -1 \\
 0, & \text{otherwise}
 \end{cases}
-\end{equation*}
+\end{equation}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]
+	{images/chapter2/hamm-freq-time}
+	\caption{Hamming window in time and frequency.}
+	\label{fig:hamm-freq-time}
+\end{figure}
 \end{itemize}
 
 \subsection{Comparison of rectangular and Hamming windows}
-we prefer Hamming window because it doesn't have side loops and in the time domain, the Hamming window does not get as close to zero near the edges.
-
-\begin{figure}[ht]
-    \centering
-    \begin{subfigure}[b]{1\textwidth}
-        \includegraphics[width=\textwidth]
-        {images/chapter2/rect-freq-time}
-        \caption{Rectangular}
-        \label{fig:rect-freq-time}
-    \end{subfigure}
-
-    \begin{subfigure}[b]{1\textwidth}
-        \includegraphics[width=\textwidth]
-        {images/chapter2/hamm-freq-time}
-        \caption{Hamming}
-        \label{fig:hamm-freq-time}
-    \end{subfigure}
-    \caption{Window in time and frequency domain.}
-    \label{fig:window-freq-time}
-\end{figure}
+Hamming window is preferred because it doesn't have side loops and in the time domain, the Hamming window does not get as close to zero near the edges.
 
 \subsection{Denoising \& speech enhancement}
-The stage of denoising or noise reduction, also referred to as enhancing of speech degraded by noise, aims to improve the speech signals quality. The objective is to improve the intelligibility, a measure of how comprehensible speech is. Noise corrupting speech signals can be grouped coarsely into the following 3 classes:
-\begin{itemize}
+The stage of denoising or noise reduction, also referred to as enhancing of speech degraded by noise as in figure \ref{fig:signal-noise}, aims to improve the speech signals quality. The objective is to improve the intelligibility, a measure of how comprehensible speech is. Noise corrupting speech signals, shown in figure \ref{fig:signal-noise}, can be grouped coarsely into the following 3 classes:
+\begin{itemize}[noitemsep]
 \item Microphone related noise.
 \item Electrical noise (e.g. electromagnetically induced or radiated noise).
 \item Environmental noise.
@@ -584,15 +571,15 @@ The stage of denoising or noise reduction, also referred to as enhancing of spee
 The first two types of noise can be easily compensated by training the speech recognizers on corresponding noisy speech samples, but compensating the environmental noise is not that elementary, due to its high variability. The basic problem of noise reduction is to reduce the external noise without disturbing the unvoiced and low-intensity noise-like components of the speech signal itself.
 \par
 The algorithms of noise reduction can be grouped into three fundamental classes. In the following exemplary algorithms for denoising are briefly described.
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item Filtering Techniques.
 \item Spectral Restoration (speech enhancement).
 \item Speech-Model-Based.
 \end{itemize}
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.75\textwidth]
 	{images/chapter2/signal-noise}
 	\caption{Signal without noise and with noise.}
 	\label{fig:signal-noise}
@@ -605,11 +592,11 @@ Prominent algorithms based on filtering techniques are Adaptive Wiener filtering
 Spectral Restoration refers to the inducing of missing spectral components of non-verbal sounds by adding noise to increase intelligibility. Harmonic Decomposition refers to a denoising technique that uses a harmonic+noise model of the speech, assuming that the speech signal is composed of a periodic/voiced and random/unvoiced part. By processing the components separately and recombining them, the speech signal can be enhanced.
 
 \subsection{voiced and unvoiced speech}
-The determination of voiced and unvoiced speech samples can be done on the basis of Energy and Zero crossing rates (\acrshort{zcr}).
+The determination of voiced and unvoiced speech samples can be done on the basis of Energy and Zero crossing rates (\acrshort{zcr}), shown in the block diagram in figure \ref{fig:algorithm-voiced-unvoiced}.
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.9\textwidth]
 	{images/chapter2/algorithm-voiced-unvoiced}
 	\caption{Algorithm to determine whether speech is voiced or unvoiced.}
 	\label{fig:algorithm-voiced-unvoiced}
@@ -618,34 +605,37 @@ The determination of voiced and unvoiced speech samples can be done on the basis
 \subsubsection{Average Short-Time Energy}
  The energy of speech is calculated frame by frames. The square of each sample is done and finally summation of all squared samples is done. separation of phonemes to voiced (high energy) and unvoiced (low energy).
 
-\begin{equation*}
+\begin{equation}
 E = \frac{1}{l_{ram}} \sum_{n=0}^{l_{ram} - 1} x^2 [n]
-\end{equation*}
+\end{equation}
 
 \subsubsection{Zero Crossing Rate (ZCR)}
 The zero crossing rates mean the number of times the transition of speech signal from positive to negative or vice versa. The zero crossing rates are calculated frame by frames. If the ZCR of speech samples having more zero crossing rates then it is an unvoiced otherwise voiced.
 
-\begin{equation*}
+\begin{equation}
 E = \frac{1}{2} \sum_{n=1}^{l_{ram} - 1} \left | \, \text{sign} \, x[n] - \text{sign} \, x[n-1] \, \right |
-\end{equation*}
+\end{equation}
 where $\text{sign} \, x[n]$ is the sign function defined as
 
-\begin{equation*}
+\begin{equation}
 \text{sign} \, x[n] = \begin{cases}
 1, & x[n] \geq 0 \\ 
 -1, & x[n] < 0
 \end{cases}
-\end{equation*}
+\end{equation}
 
-\begin{figure}[ht]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.75\textwidth]
 	{images/chapter2/low-high-zcr}
 	\caption{Distinguishing between the voiced (low zero-crossing rate) and unvoiced (high rate, rather like in noise).}
 	\label{fig:low-high-zcr}
 \end{figure}
 
-\subsection{Silence Removal} 
+\subsection{Silence Removal}
+\subsubsection{Introduction}
+This method detect silence/unvoiced part from the speech sample using uni-dimensional Mahalanobis Distance function which itself is a Linear Pattern Classifier. Our algorithm uses statistical properties of background noise as well as physiological aspect of speech production and does not assume any ad hoc threshold. We assume that background noise present in the utterances are Gaussian in nature, however a speech signal may also be contaminated with different types of noise. In such cases the corresponding properties of the noise distribution function are to be used for detection purpose.
+\par
 Pre-processing of Speech Signal serves various purposes in any speech processing application. It includes Noise Removal, Endpoint Detection, Pre-emphasis, Framing, Windowing, Echo Cancelling etc. Out of these, silence/unvoiced portion removal along with endpoint detection is the fundamental step for applications like Speech and Speaker Recognition. The proposed method uses Probability Density Function (\acrshort{pdf}) of the background noise and a Linear Pattern Classifier for classification of Voiced part of a speech from silence/unvoiced part. The work shows better end point detection as well as silence removal than conventional Zero Crossing Rate (ZCR) and Short Time Energy (\acrshort{ste}) function methods.
 \par
 It should be clear that the segmentation of the waveform into well-defined regions of silence, unvoiced, signals is not exact; it is often difficult to distinguish a weak, unvoiced sound (like /f/ or /th/) from silence, or weak voiced sound (like /v/ or /m/) from unvoiced sounds or even silence. However, it is usually not critical to segment the signal to a precision much less than several milliseconds; hence, small errors in boundary locations usually have no consequence for most applications. Since for most of the practical cases the unvoiced part has low energy content and thus silence (background noise) and unvoiced part is classified together as silence/unvoiced and is distinguished from voiced part. 
@@ -658,19 +648,19 @@ Here, we detect silence/unvoiced part from the speech sample using uni-dimension
 \subsubsection{Theory}
 \subsubsection{Gaussian or Normal Distribution}
 One of the most important results of the probability theory is the Central Limit Theorem, which states that, under various conditions, the distribution for the sum of d independent random variables approaches a particular limiting form known as the normal distribution. As such, the normal or Gaussian probability density function is very important, both for theoretical and practical reasons. In one dimension, it is defined by
-\begin{equation*}
+\begin{equation}
 p(x) = \frac{1}{\sigma \sqrt{2\pi }} e^{-\frac{1}{2}\left ( \frac{x-\mu }{\sigma } \right )^{2}}
-\end{equation*}
+\end{equation}
 The normal density is traditionally described as ``bell-shaped curve''; it is completely determined by the numerical values for two parameters, the mean $\mu$ and the variance $\sigma^2$. This is often emphasized by writing $p(x)~N(\mu,\sigma^2)$, which is read as ``x is distributed normally with mean $\mu$ and variance $\sigma^2$''. The distribution is symmetrical about the mean, the peak occurring at $x=\mu$ and the width of the ``bell'' is proportional to the standard deviation $\sigma$. Normally distributed data points tend to cluster about the mean. Numerically, the probabilities obey
 \begin{align}
-P[|x-\mu| \leq \sigma] &= 0.68 \nonumber \\ 
-P[|x-\mu| \leq 2\sigma] &= 0.95 \nonumber \\ 
+P[|x-\mu| \leq \sigma] &= 0.68 \\ 
+P[|x-\mu| \leq 2\sigma] &= 0.95 \\ 
 P[|x-\mu| \leq 3\sigma] &= 0.997 \label{eq:gaussian-majority}
 \end{align}
 as shown in figure \ref{fig:gaussian}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.75\textwidth]
 	{images/chapter2/gaussian}
 	\caption{A one-dimensional Gaussian distribution $P(u)~N(0,1)$, has 68\% of its probability mass in the range $|u|\leq 1$, 95\% in the range of $|u|\leq 2$, and 99.7\% in the range of $|u|\leq 3$.}
 	\label{fig:gaussian}
@@ -678,14 +668,14 @@ as shown in figure \ref{fig:gaussian}
 
 A natural measure of the distance from x to the mean is the distance $|x - \mu |$ measured in units of standard deviation which can be analytically expressed as
 
-\begin{equation*}
+\begin{equation}
 r = \frac{|x - \mu |}{\sigma}
-\end{equation*}
+\end{equation}
 
 and defined as ``Mahalanobis Distance'' from $x$ to $\mu$ (In the one-dimensional case, this is sometimes called z-score). Thus for instance the probability is 0.95 that the Mahalanobis distance from x to μ will be less than 2. If a random variable $x$ is modified by (a) subtracting its mean and (b) dividing by its standard deviation, it is said to be standardized. Clearly, a standardized normal random variable $r$ has zero mean and unit standard deviation-that is,
-\begin{equation*}
+\begin{equation}
 p(u) = \frac{1}{\sqrt{2\pi }} e^{-\frac{u^2}{2}}
-\end{equation*}
+\end{equation}
 which can be written as $P(u)~N(0,1)$.
 
 \subsubsection{Algorithm}
@@ -693,18 +683,26 @@ The algorithm described below is divided into two parts. First part assigns labe
 \par
 use physiological aspects of speech production for smoothing and reduction of probabilistic errors in statistical marking of Pass I.
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[]
+	{images/chapter2/s-remove-algorithm}
+	\caption{Flow Chart of the algorithm.}
+	\label{fig:s-remove-algorithm}
+\end{figure}
+
 \subsubsection{Steps}
 \begin{enumerate}
 \item Calculate the mean and standard deviation of the first 1600 samples of the given utterance. If $\mu$ and $\sigma$ are the mean and the standard deviation respectively then analytically we can write,
-\begin{align*}
+\begin{align}
 \mu &= \frac{1}{1600} \sum_{i=1}^{1600} x(i) \\
 \mu &= \sqrt{\frac{1}{1600} \sum_{i=1}^{1600} x(i - \mu)^2}
-\end{align*}
+\end{align}
 Note that background noise is characterized by this $\mu$ and $\sigma$.
 \item Go from first sample to the last sample of the speech recording. In each sample check whether one-dimensional Mahalanobis distance function greater than 3 or not. Analytically if,
-\begin{equation*}
+\begin{equation}
 \frac{|x - \mu |}{\sigma} > 3
-\end{equation*}
+\end{equation}
 the sample is to be treated as voiced sample otherwise it is an silence/unvoiced. Note that the threshold reject the samples upto 99.7\% as per equation \ref{eq:gaussian-majority} in a Gaussian Distribution thus accepting only the voiced samples.
 
 \item Mark the voiced sample as 1 and unvoiced sample as 0. Divide the whole speech signal into 10ms non-overlapping windows. Now the complete speech is represented by only zeros and ones.
@@ -717,19 +715,11 @@ the sample is to be treated as voiced sample otherwise it is an silence/unvoiced
 
 Note that in the proposed method after $\mu$ and $\sigma$ calculation it requires one division and condition checking per sample in Pass I and in Pass II one condition checking per 80 samples (10ms). In ZCR method sign of each sample is checked and number of reversal in a window (80 samples, 10 ms) is calculated. Then the no. of sign reversal is checked if within certain range for voice part classification purpose. In STE method each sample sequence energy is calculated and then summed over 80 samples (10ms) window. Then a condition checking is done on this sum to classify it as voiced part or not. Thus the proposed method is computationally comparable to figure \ref{fig:s-remove-algorithm}
 
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.6\textwidth]
-	{images/chapter2/s-remove-algorithm}
-	\caption{Flow Chart of the algorithm.}
-	\label{fig:s-remove-algorithm}
-\end{figure}
-
 Conventional STE \& ZCR based silence/unvoiced detection method and can be used for real time analysis.
 
 
 \section*{References}
-\begin{enumerate}
+\begin{enumerate}[label=(\arabic*), noitemsep]
 \item J.L. Flanagan, Speech Analysis, Synthesis, and Perception, 2nd ed., Springer-Verlag, New York, (1972).
 \item Hofmann,Y.H, Speech recognition for human computer Interaction (2009).
 \item hyper physics, http://hyperphysics.phy-astr.gsu.edu/hbase/Music/.
@@ -883,9 +873,15 @@ Conventional STE \& ZCR based silence/unvoiced detection method and can be used 
 Speech recognition system processes the word uttered by the user and extracts its features. When the user utters something, it is sent to the speech engine to be processed then converted into digital domain. The digitalized speech samples are processed to extract features using MFCC and other algorithms. Once the desired number of features is obtained, they can be sent through feature matching stage.
 \par
 The main purpose of the MFCC processor is to mimic the behavior of the human ears. The sounds generated by a human are filtered by the shape of the vocal tract including tongue, teeth etc. This shape determines what sound comes out. If we can determine the shape accurately, this should give us an accurate representation of the phoneme being produced. The shape of the vocal tract manifests itself in the envelope of the short time power spectrum, and the job of MFCCs is to accurately represent this envelope.
+\par
+The human cochlea (an organ in the ear) vibrates at different spots depending on the frequency of the incoming sounds. Depending on the location in the cochlea that vibrates (which wobbles small hairs), different nerves fire informing the brain that certain frequencies are present.
+the cochlea can't discern the difference between two closely spaced frequencies. This effect becomes more pronounced as the frequencies increase and we don't hear loudness on a linear scale. Generally, to double the perceived volume of a sound we need to put 8 times as much energy into it.
+
+\subsection{Block Diagram}
+Fig \ref{fig:mfcc} illustrates the sequence of steps (including some of the pre-processing steps) to get MFCC coefficients.
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[]
 	{images/chapter3/mfcc}
 	\caption{MFCC Block Diagram.}
 	\label{fig:mfcc}
@@ -911,47 +907,47 @@ Windowing   is done for  minimizing  the  disruptions  at  the  starting  and  a
 	\centering
 	\includegraphics[width=1\textwidth]
 	{images/chapter3/hamming}
-	\caption{example of a spectral slice of the single vowel [aa]  a)before,  b) after pre-emphasis.}
+	\caption{hamming window effect on the speech signal.}
 	\label{fig:hamming}
 \end{figure}
 
 Basically,  many  window  functions  exist  such  as  rectangular  window,  flat  top  window  and  hamming window  but,  mainly  hamming  window  is  applied  for  carrying  out  windowing  which  usually represented as:
-\begin{equation*}
+\begin{equation}
 W_n(m) = 0.54 - 0.46\cos \left ( \frac{2\pi m}{N_m -1} \right ), \; \; 0 \leq m\leq N_m -1
-\end{equation*}
+\end{equation}
 
 \subsection{Fast Fourier Transform}
 FFT is used for doing conversion from the spatial domain to the frequency domain. Each frame having $N_m$ samples are converted into frequency domain. Fourier transformation is a fast algorithm to apply Discrete Fourier Transform (DFT), on the given set of $N_m$ samples shown below:
-\begin{equation*}
+\begin{equation}
 D_k = \sum_{m=0}^{N_m -1}D_m e^{-2j\pi k\frac{m}{N_m}}, \; k=0,1,2,...,N_m - 1
-\end{equation*}
+\end{equation}
 Basically the definition for FFT and DFT is same, which means that the output for the transformation will be the same; however they differ in their computational complexity. In case of DFT, each frame with $N-M$ samples directly will be used as a sequence for Fourier transformation. On another, in case of FFT this frame will be divided into small DFT’s and then computation will be done on this divided small   DFT’s  as  individual  sequence  thus  the  computation  will  be  more  fast  and  easy.  Thus  it  is  in digital processing or other area instead of directly using DFT, FFT is used for applying DFT.
 
-\subsection{Mel-scale}
-The human cochlea (an organ in the ear) vibrates at different spots depending on the frequency of the incoming sounds. Depending on the location in the cochlea that vibrates (which wobbles small hairs), different nerves fire informing the brain that certain frequencies are present.
-\par
-In particular the cochlea can't discern the difference between two closely spaced frequencies. This effect becomes more pronounced as the frequencies increase. For this reason, we take clumps of periodogram bins and sum them up to get an idea of how much energy exists in various frequency regions. This is performed by our Mel filter bank: the first filter is very narrow and gives an indication of how much energy exists near 0 Hertz. As the frequencies get higher our filters get wider as we become less concerned about variations. We are only interested in roughly how much energy occurs at each spot. The Mel scale tells us exactly how to space our filter banks and how wide to make them.
-\par
-So, The Mel scale relates perceived frequency, or pitch, of a pure tone to its actual measured frequency. Humans are much better at discerning small changes in pitch at low frequencies than they are at high frequencies. Incorporating this scale makes our features match more closely what humans hear.
-\par
-The formula to convert frequency $f$ hertz into Mel $m_f$ is,  
-\begin{equation*}
-m_f = 2595\log \left ( \frac{f}{100} + 1 \right )
-\end{equation*}
-During the mapping, when a given frequency value is up to 1000Hz  the  Mel-frequency  scaling  is  linear  frequency  spacing,  but  after  1000Hz  the  spacing  is logarithmic as shown in figure \ref{fig:mel-scale}.
+\subsection{Mel Filter Bank}
+As mentioned above, the cochlea can't discern the difference between two closely spaced frequencies. This effect becomes more pronounced as the frequencies increase. For this reason, we take clumps of spectrum bins and sum them up to get an idea of how much energy exists in various frequency regions. This is performed by our Mel filter bank: the first filter is very narrow and gives an indication of how much energy exists near 0 Hertz. As the frequencies get higher our filters get wider as we become less concerned about variations. We are only interested in roughly how much energy occurs at each spot.
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.7\textwidth]
+	\includegraphics[width=1\textwidth]
 	{images/chapter3/mel-scale}
 	\caption{relation between mel-scale and linear  frequency scale.}
 	\label{fig:mel-scale}
 \end{figure}
 
+So, The Mel scale relates perceived frequency, or pitch, of a pure tone to its actual measured frequency. Humans are much better at discerning small changes in pitch at low frequencies than they are at high frequencies. Incorporating this scale makes our features match more closely what humans hear.
+\par
+The formula to convert frequency $f$ hertz into Mel $m_f$ is,  
+\begin{equation}
+m_f = 2595\log \left ( \frac{f}{100} + 1 \right )
+\end{equation}
+During the mapping, when a given frequency value is up to 1000Hz  the  Mel-frequency  scaling  is  linear  frequency  spacing,  but  after  1000Hz  the  spacing  is logarithmic as shown in figure \ref{fig:mel-scale}.
+\par
+The Mel scale tells us exactly how to space our filter banks, how wide to make them and also   the start and the end of each filter. After we design our filter we filter the signal and get the energy of each filtered signal .this is obvious in figure \ref{fig:mel-banks}.
+
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.7\textwidth]
+	\includegraphics[width=0.75\textwidth]
 	{images/chapter3/mel-banks}
-	\caption{filter banks(same width until 1KHZ after 1K as the frequency increases the width get wider).}
+	\caption{filter banks.}
 	\label{fig:mel-banks}
 \end{figure}
 
@@ -960,13 +956,11 @@ Once we have the filter bank energies, we take the logarithm of them. This is al
 
 \subsection{Discrete cosine Transform (DCT)}
 This process of carrying  out  DCT  is  done  in  order  to  convert  the  log  Mel  spectrum  back  into  the spatial  domain.  For this transformation either  DFT  or  DCT  both  can  be  used  for  calculating Coefficients from the given log Mel spectrum as they divide a given sequence of finite length data into discrete  vector.  However,  DFT  is  generally  used  for  spectral  analysis  where  as  DCT  used  for  data compression  as  DCT  signals  have  more  information  concentrated  in  a  small  number  of  coefficients and hence, it is easy and requires less storage to represent Mel spectrum in a relative small number of coefficients.  This instead of  using  DFT  DCT  is  desirable  for  the coefficients calculation  as  DCT outputs can contain important amounts of energy. The output after applying DCT is known as MFCC (Mel Frequency Cepstrum Coefficient)
-
-\begin{equation*}
+\begin{equation}
 C_n = \sum_{k-1}^{k}\left ( \log D_k \right )\cos \left [ m(k-0.5) \left ( \frac{\pi}{k} \right ) \right ], \; m=0,1,...,k-1
-\end{equation*}
-
+\end{equation}
 where $C_n$ represents the MFCC and $m$ is the number of the coefficients.
-
+ 
 \section{Discrete Wavelet Transform}
 \subsection{Introduction}
 In 19th century, the French mathematician J. Fourier, showed that any periodic function can be expressed as an infinite sum of periodic complex exponential functions. Many years after he had discovered this remarkable property of (periodic) functions, his ideas were generalized to first non-periodic functions, and then periodic or non-periodic discrete time signals. It is after this generalization that it became a very suitable tool for computer calculations. In 1965, a new algorithm called Fast Fourier Transform (FFT) was developed and FT became even more popular.
@@ -974,82 +968,30 @@ In 19th century, the French mathematician J. Fourier, showed that any periodic f
 FT decomposes a signal to complex exponential functions of different frequencies. The way it does this, is defined by the following two equations:
 \begin{align}
 X(f) &= \int_{-\infty}^{\infty} x(t) . e^{-2j\pi ft} \, \text{d}t \label{eq:fourier-transform} \\
-x(t) &= \int_{-\infty}^{\infty} X(f) . e^{2j\pi ft} \, \text{d}f \nonumber
+x(t) &= \int_{-\infty}^{\infty} X(f) . e^{2j\pi ft} \, \text{d}f 
 \end{align}
-
-In the above equation, $t$ stands for time, $f$ stands for frequency, and x denotes the signal at hand. Note that $x$ denotes the signal in time domain and the $X$ denotes the signal in frequency domain. This convention is used to distinguish the two representations of the signal. The first Equation is called the Fourier transform of $x(t)$, and the second equation is called the inverse Fourier transform of $X(f)$, which is $x(t)$.
-\par
-The signal $x(t)$, is multiplied with an exponential term, at some certain frequency $f$, and then integrated over time.
-
-\begin{figure}[!h]
-    \centering
-    \begin{subfigure}[b]{0.7\textwidth}
-        \includegraphics[width=\textwidth]
-        {images/chapter3/ft-signal-time}
-        \caption{time domain}
-        \label{fig:ft-signal-time}
-    \end{subfigure}
-
-    \begin{subfigure}[b]{0.7\textwidth}
-        \includegraphics[width=\textwidth]
-        {images/chapter3/ft-signal-freq}
-        \caption{frequency domain}
-        \label{fig:ft-signal-freq}
-    \end{subfigure}
-    \caption{representation of equation \ref{eq:ft-signal}.}
-    \label{fig:ft-signal}
-\end{figure}
 
 IMPORTANT: The information provided by the integral, corresponds to all time instances, since the integration is from minus infinity to plus infinity over time. It follows that no matter where in time the component with frequency $f$ appears, it will affect the result of the integration equally as well. In other words, whether the frequency component $f$ appears at time $t_1$ or $t_2$, it will have the same effect on the integration. This is why Fourier transform is not suitable if the signal has time varying frequency, i.e., the signal is non-stationary. If only, the signal has the frequency component $f$ at all times (for all $f$ values), then the result obtained by the Fourier transform makes sense.
 \par
 Note that the Fourier transform tells whether a certain frequency component exists or not. This information is independent of where in time this component appears. It is therefore very important to know whether a signal is stationary or not, prior to processing it with the FT.
-\par
-Look at figure \ref{fig:ft-signal}, which shows the signal,
-\begin{equation}
-x(t) = \cos(2\pi 5t) + \cos(2\pi 10t) + \cos(2\pi 20t) + \cos(2\pi 50t)
-\label{eq:ft-signal}
-\end{equation}
-that is, it has four frequency components of 5, 10, 20, and 50 Hz, all occurring at all times.
-\subsection{Short-term Fourier Transform}
-Note the four peaks in the above figure, which correspond to four different frequencies. Now, look at the following figure: Here the signal is again the cosine signal, and it has the same four frequencies. However, these components occur at different times.
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.7\textwidth}
-        \includegraphics[width=\textwidth]
-        {images/chapter3/ft-fail-signal-time}
-        \caption{time domain}
-        \label{fig:ft-fail-signal-time}
-    \end{subfigure}
-
-    \begin{subfigure}[b]{0.7\textwidth}
-        \includegraphics[width=\textwidth]
-        {images/chapter3/ft-fail-signal-freq}
-        \caption{frequency domain}
-        \label{fig:ft-fail-signal-freq}
-    \end{subfigure}
-    \caption{}
-    \label{fig:ft-fail-signal}
-\end{figure}
-What you are supposed to see in the above figure, is it is (almost) same with the previous FT figure. Please look carefully and note the major four peaks corresponding to 5, 10, 20, and 50 Hz. As you can see from the above example, FT cannot distinguish the two signals very well. To FT, both signals are the same, because they constitute of the same frequency components. Therefore, FT is not a suitable tool for analyzing non-stationary signals, i.e., signals with time varying spectra.
-\par
-So, how are we going to insert this time business into our frequency plots? Let's look at the problem in hand little closer. 
-What was wrong with FT? It did not work for non-stationary signals. Let's think this: Can we assume that, some portion of a non-stationary signal is stationary? 
-The answer is yes. 
-Just look at the third figure above. The signal is stationary every 250 time unit intervals. 
-You may ask the following question? 
-What if the part that we can consider to be stationary is very small? 
-Well, if it is too small, it is too small. There is nothing we can do about that, and actually, there is nothing wrong with that either. We have to play this game with the physicists' rules. 
-If this region where the signal can be assumed to be stationary is too small, then we look at that signal from narrow windows, narrow enough that the portion of the signal seen from these windows are indeed stationary. 
-This approach of researchers ended up with a revised version of the Fourier transform, so-called: The Short Time Fourier Transform (STFT).
+\subsection{Short-time Fourier Transform}
 There is only a minor difference between STFT and FT. In STFT, the signal is divided into small enough segments, where these segments (portions) of the signal can be assumed to be stationary. For this purpose, a window function "w" is chosen. The width of this window must be equal to the segment of the signal where its stationarity is valid.
+\par
 This window function is first located to the very beginning of the signal. That is, the window function is located at t=0. Let's suppose that the width of the window is "T" s. At this time instant (t=0), the window function will overlap with the first T/2 seconds (I will assume that all time units are in seconds). The window function and the signal are then multiplied. By doing this, only the first T/2 seconds of the signal is being chosen, with the appropriate weighting of the window (if the window is a rectangle, with amplitude "1", then the product will be equal to the signal). Then this product is assumed to be just another signal, whose FT is to be taken. In other words, FT of this product is taken, just as taking the FT of any signal. 
 The result of this transformation is the FT of the first T/2 seconds of the signal. If this portion of the signal is stationary, as it is assumed, then there will be no problem and the obtained result will be a true frequency representation of the first T/2 seconds of the signal. 
-The next step, would be shifting this window (for some t1 seconds) to a new location, multiplying with the signal, and taking the FT of the product. This procedure is followed, until the end of the signal is reached by shifting the window with "t1" seconds intervals.
-\begin{equation*}
+The next step, would be shifting this window (for some t1 seconds) to a new location, multiplying with the signal, and taking the FT of the product. This procedure is followed, until the end of the signal is reached by shifting the window with "t1" seconds intervals. Figure \ref{fig:stft-3d} describes the effect of STFT.
+\begin{equation}
 STFT^{(\omega)}_{X}(t, f) = \int_{t}\left [ x(t) . \omega^{*}(t-t')  \right ] e^{-2j\pi ft} \text{d}t
-\end{equation*}
+\end{equation}
 x(t) is the signal itself, w(t) is the window function.
-\par
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\textwidth]
+	{images/chapter3/stft}
+	\caption{Short-time fourier transform}
+	\label{fig:stft-3d}
+\end{figure}
+
 The problem with the STFT has something to do with the width of the window function that is used. To be technically correct, this width of the window function is known as the support of the window. If the window function is narrow, than it is known as compactly supported. This terminology is more often used in the wavelet world, as we will see later.
 
 \subsection{Continuous Wavelet Transform}
@@ -1059,10 +1001,10 @@ The continuous wavelet transform was developed as an alternative approach to the
 \item The width of the window is changed as the transform is computed for every single spectral component, which is probably the most significant characteristic of the wavelet transform. 
 \end{enumerate}
 The continuous wavelet transform is defined as follows
-\begin{align*}
+\begin{align}
 CWT_{x}^{\psi}(\tau, s) = \Psi (\tau, s) &= \frac{1}{\sqrt{\left | s \right |}} \int x(t) \psi^{*} \left ( \frac{t-\tau}{s} \right ) \text{d}t \\
 \psi_{t,s} &= \frac{1}{\sqrt{s}} \psi \left ( \frac{t - \tau}{s} \right )
-\end{align*}
+\end{align}
 As seen in the above equation, the transformed signal is a function of two variables, tau and s, the translation and scale parameters, respectively. $\psi(t)$ is the transforming function, and it is called the mother wavelet. The term mother wavelet gets its name due to two important properties of the wavelet analysis as explained below.
 \par
 The term wavelet means a small wave. The smallness refers to the condition that this (window) function is of finite length (compactly supported). The wave refers to the condition that this function is oscillatory. The term mother implies that the functions with different region of support that are used in the transformation process are derived from one main function, or the mother wavelet. In other words, the mother wavelet is a prototype for generating the other window functions. 
@@ -1070,7 +1012,6 @@ The term wavelet means a small wave. The smallness refers to the condition that 
 The term translation is used in the same sense as it was used in the STFT; it is related to the location of the window, as the window is shifted through the signal. This term, obviously, corresponds to time information in the transform domain. However, we do not have a frequency parameter, as we had before for the STFT. Instead, we have scale parameter which is defined as 1/frequency. The term frequency is reserved for the STFT. Scale is described in more detail in the next section.
 \subsubsection{The Scale}
 The parameter scale in the wavelet analysis is similar to the scale used in maps. As in the case of maps, high scales correspond to a non-detailed global view (of the signal), and low scales correspond to a detailed view. Similarly, in terms of frequency, low frequencies (high scales) correspond to a global information of a signal (that usually spans the entire signal), whereas high frequencies (low scales) correspond to a detailed information of a hidden pattern in the signal (that usually lasts a relatively short time). Cosine signals corresponding to various scales are given as examples in figure \ref{fig:cwt-scale}.
-
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.6\textwidth]
@@ -1079,14 +1020,6 @@ The parameter scale in the wavelet analysis is similar to the scale used in maps
 	\label{fig:cwt-scale}
 \end{figure}
 
-Fortunately, in practical applications, low scales (high frequencies) do not last for the entire duration of the signal, unlike those shown in the figure, but they usually appear from time to time as short bursts, or spikes. High scales (low frequencies) usually last for the entire duration of the signal.
-\par
-Scaling, as a mathematical operation, either dilates or compresses a signal. Larger scales correspond to dilated (or stretched out) signals and small scales correspond to compressed signals. All of the signals given in the figure are derived from the same cosine signal, i.e., they are dilated or compressed versions of the same function. In the above figure, s=0.05 is the smallest scale, and s=1 is the largest scale.
-\par
-The wavelet is placed at the beginning of the signal at the point which corresponds to time=0. The wavelet function at scale ``1'' is multiplied by the signal and then integrated over all times. The result of the integration is then multiplied by the constant number 1/sqrt{s}. This multiplication is for energy normalization purposes so that the transformed signal will have the same energy at every scale. The final result is the value of the transformation, i.e., the value of the continuous wavelet transform at time zero and scale s=1. In other words, it is the value that corresponds to the point tau =0 , s=1 in the time-scale plane. 
-\par
-The wavelet at scale s=1 is then shifted towards the right by tau amount to the location t=tau , and the above equation is computed to get the transform value at t=tau , s=1 in the time-frequency plane. This procedure is repeated until the wavelet reaches the end of the signal. One row of points on the time-scale plane for the scale s=1 is now completed. Then, s is increased by a small value. Note that, this is a continuous transform, and therefore, both tau and s must be incremented continuously. However, if this transform needs to be computed by a computer, then both parameters are increased by a sufficiently small step size. This corresponds to sampling the time-scale plane.
-\par
 The above procedure is repeated for every value of s. Every computation for a given value of s fills the corresponding single row of the time-scale plane. When the process is completed for all desired values of s, the CWT of the signal has been calculated. figure \ref{fig:cwt-1} illustrate the entire process step by step.
 
 \begin{figure}[!h]
@@ -1097,7 +1030,7 @@ The above procedure is repeated for every value of s. Every computation for a gi
 	\label{fig:cwt-1}
 \end{figure}
 
-The signal and the wavelet function are shown for four different values of tau. The signal is a truncated version of the signal shown in Figure . The scale value is 1, corresponding to the lowest scale, or highest frequency. Note how compact it is (the blue window). It should be as narrow as the highest frequency component that exists in the signal. Four distinct locations of the wavelet function are shown in the figure at to=2, to=40, to=90, and to=140. At every location, it is multiplied by the signal. Obviously, the product is nonzero only where the signal falls in the region of support of the wavelet, and it is zero elsewhere. By shifting the wavelet in time, the signal is localized in time, and by changing the value of s, the signal is localized in scale (frequency).
+The signal and the wavelet function are shown for four different values of tau. The signal is a truncated version of the signal shown in Figure \ref{fig:cwt-1}. The scale value is 1, corresponding to the lowest scale, or highest frequency. Note how compact it is (the blue window). It should be as narrow as the highest frequency component that exists in the signal. Four distinct locations of the wavelet function are shown in the figure at to=2, to=40, to=90, and to=140. At every location, it is multiplied by the signal. Obviously, the product is nonzero only where the signal falls in the region of support of the wavelet, and it is zero elsewhere. By shifting the wavelet in time, the signal is localized in time, and by changing the value of s, the signal is localized in scale (frequency).
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.6\textwidth}
@@ -1128,24 +1061,24 @@ The main idea is a time-scale representation of a digital signal is obtained usi
 The resolution of the signal, which is a measure of the amount of detail information in the signal, is changed by the filtering operations, and the scale is changed by up sampling and down sampling (subsampling) operations. Subsampling a signal corresponds to reducing the sampling rate,or removing some of the samples of the signal. For example, subsampling by two refers to dropping every other sample of the signal. Subsampling by a factor n reduces the number of samples in the signal n times.
 \par
 The procedure starts with passing this signal (sequence) through a half band digital lowpass filter with impulse response h[n]. Filtering a signal corresponds to the mathematical operation of convolution of the signal with the impulse response of the filter. The convolution operation in discrete time is defined as,
-\begin{equation*}
+\begin{equation}
 x[n]*h[n] = \sum_{k=-\infty}^{\infty} x[k].h[n-k]
-\end{equation*}
+\end{equation}
 A half band lowpass filter removes all frequencies that are above half of the highest frequency in the signal. For example, if a signal has a maximum of 1000 Hz component, then half band lowpass filtering removes all the frequencies above 500 Hz.
 \par
 The unit of frequency is of particular importance at this time. In discrete signals, frequency is expressed in terms of radians. Accordingly, the sampling frequency of the signal is equal to 2p radians in terms of radial frequency. Therefore, the highest frequency component that exists in a signal will be p radians, if the signal is sampled at Nyquist’s rate (which is twice the maximum frequency that exists in the signal); that is, the Nyquist’s rate corresponds to p rad/s in the discrete frequency domain. Therefore, using Hz is not appropriate for discrete signals. However, Hz is used whenever it is needed to clarify a discussion, since it is very common to think of frequency in terms of Hz. It should always be remembered that the unit of frequency for discrete time signals is radians.
 \par
 After passing the signal through a half band lowpass filter, half of the samples can be eliminated according to the Nyquist’s rule, since the signal now has a highest frequency of p/2 radians instead of p radians. Simply discarding every other sample will subsample the signal by two, and the signal will then have half the number of points. The scale of the signal is now doubled. Note that the lowpass filtering removes the high frequency information, but, leaves the scale unchanged. Only the subsampling process changes the scale. Resolution, on the other hand, is related to the amount of information in the signal, and therefore, it is affected by the filtering operations. Half band lowpass filtering removes half of the frequencies, which can be interpreted as losing half of the information. Therefore, the resolution is halved after the filtering operation. Note, however, the subsampling operation after filtering does not affect the resolution, since removing half of the spectral components from the signal makes half the number of samples redundant anyway. Half the samples can be discarded without any loss of information. In summary, the lowpass filtering halves the resolution, but leaves the scale unchanged. The signal is then subsampled by 2 since half of the number of samples are redundant. This doubles the scale. This procedure can mathematically be expressed as
-\begin{equation*}
+\begin{equation}
 y[n] = \sum_{k=-\infty}^{\infty} h[k].x[2n-k]
-\end{equation*}
+\end{equation}
 Having said that, we now look how the DWT is actually computed: The DWT analyzes the signal at different frequency bands with different resolutions by decomposing the signal into a coarse approximation and detail information. DWT employs two sets of functions, called scaling functions and wavelet functions, which are associated with low pass and high pass filters, respectively. The decomposition of the signal into different frequency bands is simply obtained by successive high pass and lowpass filtering of the time domain signal. The original signal x[n] is first passed through a half band high pass filter g[n] and a lowpass filter h[n]. After the filtering, half of the samples can be eliminated according to the Nyquist’s rule, since the signal now has a highest frequency of p/2 radians instead of p. The signal can therefore be subsampled by 2, simply by discarding every other sample.
 \par
 This constitutes one level of decomposition and can mathematically be expressed as follows:
-\begin{align*}
+\begin{align}
 y_{high}[k] &= \sum_{n} x[n].g[2k-n] \\ 
 y_{low}[k] &= \sum_{n} x[n].h[2k-n]
-\end{align*}
+\end{align}
 where $y_{high}[k]$ and $y_{low}[k]$ are the outputs of the high pass and lowpass filters, respectively, after subsampling by 2. 
 \par
 This decomposition halves the time resolution since only half the number of samples now characterizes the entire signal. However, this operation doubles the frequency resolution, since the frequency band of the signal now spans only half the previous frequency band, effectively reducing the uncertainty in the frequency by half. The above procedure, which is also known as the subband coding, can be repeated for further decomposition. At every level, the filtering and subsampling will result in half the number of samples (and hence half the time resolution) and half the frequency band spanned (and hence double the frequency resolution). Figure \ref{fig:subband-algorithm} illustrates this procedure, where x[n] is the original signal to be decomposed, and h[n] and g[n] are lowpass and high pass filters, respectively. The bandwidth of the signal at every level is marked on the figure as "f".
@@ -1181,19 +1114,19 @@ The frequencies that are most prominent in the original signal will appear as hi
 The frequency bands that are not very prominent in the original signal will have very low amplitudes, and that part of the DWT signal can be discarded without any major loss of information, allowing data reduction. Figure 4.2 illustrates an example of how DWT signals look like and how data reduction is provided.
 \par
 One important property of the discrete wavelet transform is the relationship between the impulse responses of the high pass and lowpass filters. The high pass and lowpass filters are not independent of each other, and they are related by
-\begin{equation*}
+\begin{equation}
 g[L-1-n] = (-1)^n .h(n)
-\end{equation*}
+\end{equation}
 
 where g[n] is the high pass, h[n] is the lowpass filter, and L is the filter length (in number of points). Note that the two filters are odd index alternated reversed versions of each other. Lowpass to high pass conversion is provided by the $(-1)^n$ term. Filters satisfying this condition are commonly used in signal processing, and they are known as the Quadrature Mirror Filters (QMF). The two filtering and subsampling operations can be expressed by
-\begin{align*}
+\begin{align}
 y_{high}[k] &= \sum_{n} x[n].g[-n+2k] \\ 
 y_{low}[k] &= \sum_{n} x[n].h[-n+2k]
-\end{align*}
+\end{align}
 The reconstruction in this case is very easy since half band filters form orthonormal bases. The above procedure is followed in reverse order for the reconstruction. The signals at every level are up sampled by two, passed through the synthesis filters g’[n], and h’[n] (high pass and lowpass, respectively), and then added. The interesting point here is that the analysis and synthesis filters are identical to each other, except for a time reversal. Therefore, the reconstruction formula becomes (for each layer)
-\begin{equation*}
+\begin{equation}
 x[n] = \sum_{k=-\infty}^{\infty} \left [ \left ( y_{high}[k].g[-n+2k] \right ) + \left ( y_{low}[k].h[-n+2k] \right ) \right ]
-\end{equation*}
+\end{equation}
 However, if the filters are not ideal half band, then perfect reconstruction cannot be achieved. Although it is not possible to realize ideal filters, under certain conditions it is possible to find filters that provide perfect reconstruction. The most famous ones are the ones developed by Ingrid Daubechies, and they are known as Daubechies’ wavelets.
 \par
 Note that due to successive subsampling by 2, the signal length must be a power of 2, or at least a multiple of power of 2, in order this scheme to be efficient. The length of the signal determines the number of levels that the signal can be decomposed to. For example, if the signal length is 1024, ten levels of decomposition are possible.
@@ -1228,13 +1161,6 @@ family is the most popular wavelet family used for texture feature analysis, due
 	\caption{Daubechies 20 wavelet.}
 	\label{fig:daubechies-20}
 \end{figure}
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.6\textwidth]
-	{images/chapter3/daubechies-1-10}
-	\caption{Daubechies 2-10}
-	\label{fig:daubechies-1-10}
-\end{figure}
 
 Applications of Wavelet Transform
 \begin{enumerate}
@@ -1253,9 +1179,9 @@ Fourier transform based spectral analysis is the dominant analytical tool for fr
 A signal is unfortunately corrupted by various factors which effects as noise during acquisition. These noisy effects decrease the performance of visual and computerized analysis. It is clear that the removing of the noise from the signal facilitate the processing. The de-noising process can be described as to remove the noise while retaining and not distorting the quality of processed signal. The traditional way of de-noising to remove the noise from a signal or an image is to use a low or band pass filter with cut off frequencies. However the traditional filtering techniques are able to remove a relevant of the noise, they are incapable if the noise in the band of the signal to be analysed. Therefore, many de-noising techniques are proposed to overcome this problem.
 \par
 Because the origin and non-stationary of the noise infecting in  the signal, it is difficult to model it. Nevertheless, if the noise assumed as stationary, an empirically recorded signal that is corrupted by additive noise can be represented as;
-\begin{equation*}
+\begin{equation}
 Y(i) = X(i) + \sigma \varepsilon(i)
-\end{equation*}
+\end{equation}
 
 Where $Y(i)$ noisy signal,  $X(i)$  is noise free actual signal and  $\varepsilon(i)$ are independently normal random variables and  $\sigma$ represents the intensity of the noise in $Y(i)$  . The noise is usually modelled as stationary independent zero-mean white Gaussian variables.
 \par
@@ -1266,39 +1192,38 @@ However, there is some issue that must be under consideration. The most prominen
 \subsection{Algorithm}
 In Automatic 1-D De-noising, It performs an automatic 
 de-noising process of a one-dimensional  signal  using wavelets  and  returns  a  de-noised  version of  input  signal  obtained  by  thresholding the  wavelet  coefficients.  The  De-noising objective  is  to  suppress  the  noise  part  of the  signal  and  to  recover  the  original one. The de-noising procedure proceeds in three steps:
-\begin{enumerate}
+\begin{enumerate}[label=\Roman*., noitemsep]
 \item Decomposition
 \item Thresholding and threshold estimation techniques 
 \item Reconstruction
 \end{enumerate}
-
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.3\textwidth]
+	\includegraphics[]
 	{images/chapter3/denoise-proc}
 	\caption{de-noising procedure}
 	\label{fig:denoise-proc}
 \end{figure}
 
-\subsubsection{Decomposition}
+\subsubsection{I. Decomposition}
 The signal is decomposed in ``approximation'' and ``detail'' coefficients at each level. This is made through a process that is equivalent to low-pass and high passes filtering, respectively, by using wavelet packet transform.
 
-\subsubsection{Thresholding \& Threshold Estimation Techniques}
+\subsubsection{II. Thresholding \& Threshold Estimation Techniques}
 The simpler way to remove noise or to reconstruct the original signal from a contaminated signal, using the wavelet coefficients which are the result of decomposition in wavelet transform, is to eliminate the small coefficient associated to the noise. After updating the coefficients by removing the small coefficients assuming as noise, the original signal can be obtained by the reconstruction algorithm using the noise free coefficients. Because it is usually considered that the noise has high frequency coefficients, the elimination of the small coefficient generally applied on the detail coefficients after the decomposition. Indeed, the main idea of the wavelet de-noising to obtain the ideal components of the signal from the noisy signal requires the estimation of the noise level. The estimated noise level is used in order to threshold the small coefficient assumed as noise.
 
-Thresholding can be applied by implementing either hard or soft thresholding method, which also called as shrinkage. In the hard thresholding, the wavelet coefficient below a give value are stetted to zero, while in soft thresholding the wavelet coefficient are reduced be a quantity to the thresh value.  The threshold value is the estimation of the noise level, which is generally calculated from the standard deviation of the detail coefficient. Figure 4 ??? indicates the two types of thresholding, which can be expressed analytically as
+Thresholding can be applied by implementing either hard or soft thresholding method, which also called as shrinkage. In the hard thresholding, the wavelet coefficient below a give value are stetted to zero, while in soft thresholding the wavelet coefficient are reduced be a quantity to the thresh value.  The threshold value is the estimation of the noise level, which is generally calculated from the standard deviation of the detail coefficient. Figure \ref{fig:threshold-types} indicates the two types of thresholding, which can be expressed analytically as
 \begin{itemize}
 \item Hard threshold
-\begin{equation*}
+\begin{equation}
 y = \begin{cases}
 x, & \left | x  \right | > \lambda \\ 
 0, & \left | x  \right | < \lambda
 \end{cases}
-\end{equation*}
+\end{equation}
 \item Soft threshold
-\begin{equation*}
+\begin{equation}
 y = \text{sign}(x) \left ( \left | x \right | - \lambda \right )
-\end{equation*}
+\end{equation}
 \end{itemize}
 
 Where $x$  is the input signal, $y$ is the signal after threshold and  $\lambda$ is the threshold value ,which is critical as the estimator leading to destruction, reduction, or increase in the value of a wavelet coefficient.
@@ -1318,12 +1243,12 @@ One important point in thresholding methods   is to find the appropriate value f
 \end{equation}
 Where $l$ denotes the number of decomposition levels. As mentioned above, this median selection made on the detail coefficient of the analysed signal. 
 the threshold estimator by Donoho is the  universal threshold, or global threshold, it uses a fixed threshold form given as;
-\begin{equation*}
+\begin{equation}
 \lambda u = \sigma \sqrt{\log n}
-\end{equation*}
+\end{equation}
 Where $n$ denotes the length of the analysed signal and $\sigma$ is given by equation \ref{eq:sigma-median}. The advantage of this thresholding appears in software implementation due to easy to remember and coding.
 
-\subsubsection{Reconstruction}
+\subsubsection{III. Reconstruction}
 After  decomposing  the  signal  in approximate  and  detail  coefficients, threshold  value  is  selected  by  using threshold  selection  rule.  Then  by  using this  value,  thresholding  is  done  on detailed  coefficients.  After  detail coefficients  thresholding,  signal  is reconstructed  by  using  original approximation  coefficients  and  modified detail  coefficients.  Both hard and soft thresholding techniques are used   to compare the efficiency of the method. figure \ref{} illustrates the original noisy signal and the reconstructed signal.
 
 \begin{figure}[!h]
@@ -1410,9 +1335,9 @@ The principle behind the use of LPC is to minimize the sum of the squared differ
 
 The transfer function of the time varying
 digital filter is given by
-\begin{equation*}
+\begin{equation}
 H(z) = \frac{1}{1-\sum_{k=1}^{p} a_k z^{-k}}
-\end{equation*}
+\end{equation}
 Where k=1 to p, which will be 10 for the LPC-10 algorithm and 18 for the improved algorithm that is utilized. Levinsion-Durbin recursion will be utilized to compute the required parameters for the auto-correlation method. 
 
 The LPC analysis of each frame also involves the decision-making process of voiced or unvoiced. A pitch-detecting algorithm is employed to determine correct pitch period. It is
@@ -1461,18 +1386,18 @@ where $a_0 = 1$. Taking the $z$-transform on Eq. \ref{eq:lpc_error}, we obtain
 E(z) = S(z) + \sum_{i=1}^{M} a_i S(z) z^{-i} = S(z)\left [ 1 + \sum_{i=1}^{M} a_i z^{-i} \right ] = S(z) A(z)
 \end{equation}
 where
-\begin{equation*} \label{eq:lpc_az}
+\begin{equation} \label{eq:lpc_az}
 A(z) = 1 + \sum_{i=1}^{M} a_i z^{-i} = \sum_{i=0}^{M} a_i z^{-i}
-\end{equation*}
+\end{equation}
 Eq. \ref{eq:lpc_errorz} can be equivalently written as
-\begin{equation*} \label{eq:lpc_sz}
+\begin{equation} \label{eq:lpc_sz}
 S(z) = E(z) \frac{1}{A(z)}
-\end{equation*}
+\end{equation}
 
 This shows that the speech signal can be viewed as the output of an all-pole digital filter, whose transfer function is
-\begin{equation*} \label{eq:lpc_filter_tf}
+\begin{equation} \label{eq:lpc_filter_tf}
 \frac{1}{A(z)}
-\end{equation*}
+\end{equation}
 and the input to the filter is the LPC error signal $e[n]$. This (forward) filtering view of LPC analysis can be used in interpret Eq. \ref{eq:lpc_errorz} as inverse filtering. That is, if we pass the speech signal $s[n]$ as input into an inverse filter whose transfer function is $A(z)$, then the output of the inverse filter will be the error signal $e[n]$. $A(z)$ acts as the inverse of the synthesis filter that creates $S(z)$.
 
 \subsection{Least-squares estimate of LPC coefficients}
@@ -1486,29 +1411,29 @@ Under the least-squares optimization criterion, the total squared error is defin
 
 where $n_0$ and $n_1$ are summation limits, or the sample range over which the optimization is carried out. Substituting Eq. \ref{eq:lpc_error}, we have
 
-\begin{equation*}
+\begin{equation}
 \varepsilon = \sum_{n=n_0}^{n_1} \left [ \sum_{i=0}^{M} a_i s[n-i] \right ]^2 = \sum_{n=n_0}^{n_1} \sum_{i=0}^{M} \sum_{j=0}^{M} a_i s[n-i] s[n-j] a_j = \sum_{i=0}^{M} \sum_{j=0}^{M} a_i c_{ij} a_j,
-\end{equation*}
+\end{equation}
 
 where
 
-\begin{equation*}
+\begin{equation}
 c_{ij} = \sum_{n=n_0}^{n_1} s[n-i] s[n-j],
-\end{equation*}
+\end{equation}
 
 To minimize $\varepsilon$ with respect to the LPC coefficients $a_1, a_2, ..., a_M$, we set the partial derivatives to zero and solve the resulting equations. This gives
-\begin{equation*}
+\begin{equation}
 \frac{\partial \varepsilon }{\partial a_k} = 2 \sum_{i=0}^{M} a_i c_{ij} = 0
-\end{equation*}
+\end{equation}
 
 Since $a_0 = 1$, this becomes the following celebrated normal equation:
-\begin{equation*}
+\begin{equation}
 \sum_{i=1}^{M} a_i c_{ik} = -c_{0k}, k = 1, 2,..., M
-\end{equation*}
+\end{equation}
 
 
 \section*{References}
-\begin{enumerate}
+\begin{enumerate}[label=(\arabic*), noitemsep]
 \item Ramesh    Babu.N "Speech Recognition using MFCC and DTW " Conference    Paper -1st Int. Conf. on Advances in Electrical Engineering, At VIT, Vellore, India January 2014, link: https://www.researchgate.net/publication/260762671
 \item http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/
 \item Shikha Gupta1, Jafreezal Jaafar2, Wan Fatimah wan Ahmad3  and Arpit Bansal4 "FEATURE EXTRACTION USING MFCC "Signal \& Image Processing : Signal \& Image Processing, An International Journal (SIPIJ) Vol.4, No.4, August 2013
@@ -1686,7 +1611,7 @@ Since $a_0 = 1$, this becomes the following celebrated normal equation:
 \chapter{Classification}
 \section{Neural Network}
 \subsection{History}
-The study of the human brain is hundreds of years old. With the advent of modern electronics, it was only natural to try to harness this thinking process. The first step towards artificial neural networks came in 1943 when Warren McCulloch, a neurophysiologist, and a young mathematician, Walter Pitts, wrote a paper on how neurons might work. They modelled a simple neural network with electrical circuits.
+The study of the human brain is tens of years old. With the advent of modern electronics, it was only natural to try to harness this thinking process. The first step towards artificial neural networks came in 1943 when Warren McCulloch, a neurophysiologist, and a young mathematician, Walter Pitts, wrote a paper on how neurons might work. They modelled a simple neural network with electrical circuits.
 \par
 Reinforcing this concept of neurons and how they work was a book written by Donald Hebb. {\itshape The Organization of Behaviour} was written in 1949. It pointed out that neural pathways are strengthened each time they are used.
 \par
@@ -1717,7 +1642,7 @@ When the neurons are performing a specific task, a certain number of neurons mus
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]
+	\includegraphics[width=0.75\textwidth]
 	{images/chapter4/biological_neuron}
 	\caption{simplified biological neurons.}
 	\label{fig:biological_neuron}
@@ -1740,12 +1665,17 @@ With this model of an artificial neuron it was now proven that systems of neuron
 
 \subsection{Fundamentals of Neural Networks}
 While there are many different architectures of neural networks, each one of these systems contain similar basic attributes. These attributes are processing units, weights, a computation method and a training method, as equation \ref{eq:first_neuron}  which describes figure \ref{fig:single_input_neuron}.
-
 \begin{equation}
 n = \sum (w \times p) + b
 \label{eq:first_neuron}
 \end{equation}
 
+Where
+\begin{itemize}[noitemsep]
+\item $w$ is the weight of connection,
+\item $p$ is the input to the neural network,
+\item $b$ is bias.
+\end{itemize}
 \subsubsection{Processing Units}
 A neural network system is made up of a specific number of processing units that represent neurons in a human brain. These units are typically divided into different groups. Some units represent the input units that receive the data to process, for example numerical values representing an image. Units that are hidden inside the neural network work to manipulate and transform the input information. The final group of units that can be known as output units represent the decision of the neural network.
 \par
@@ -1753,7 +1683,7 @@ Each neuron that receives data performs a defined function. The results of this 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.85\textwidth]
 	{images/chapter4/activation_functions}
 	\caption{activation functions.}
 	\label{fig:activation_functions}
@@ -1781,9 +1711,9 @@ A single-input neuron is shown in figure \ref{fig:biological_neuron}. The scalar
 \end{figure}
 
 The neuron output is calculated as
-\begin{equation*}
+\begin{equation}
 a = f(wp + b)
-\end{equation*}
+\end{equation}
 The actual output depends on the particular transfer function that is chosen. The bias is much like a weight, except that it has a constant input of $1$. $w$ and $b$ are both adjustable scalar parameters of the neuron. Typically the transfer function is chosen by the designer and then the parameters $w$ and $b$ will be adjusted by some learning rule so that the neuron input/output relationship meets some specific goal.
 
 \subsubsection{Multiple-Input Neuron}
@@ -1798,17 +1728,17 @@ Typically, a neuron has more than one input. A neuron with $R$ inputs is shown i
 \end{figure}
 
 The neuron has a bias $b$, which is summed with the weighted inputs to form the net input $n$:
-\begin{equation*}
+\begin{equation}
 n = W_{1,1}P_{1} + W_{1,2}P_{2} + ... + W_{1,R}P_{R} + b
-\end{equation*}
+\end{equation}
 This expression can be written in matrix form:
-\begin{equation*}
+\begin{equation}
 n = \mathbf{Wp} + b
-\end{equation*}
+\end{equation}
 where the matrix $\mathbf{W}$ for the single neuron case has only one row. Now the neuron output can be written as
-\begin{equation*}
+\begin{equation}
 a = f(\mathbf{Wp} + b)
-\end{equation*}
+\end{equation}
 
 \subsection{Neurons Architecture}
 Commonly one neuron, even with many inputs, may not be sufficient. We might need five or ten, operating in parallel, in what is called a ``layer.'' This concept of a layer is discussed below.
@@ -1831,14 +1761,14 @@ Each element of the input vector $\mathbf{p}$ is connected to each neuron throug
 Do all the neurons in a layer must have the same transfer function? The answer is no; you can define a single (composite) layer of neurons having different transfer functions by combining two of the networks shown above in parallel. Both networks would have the same inputs, and each network would create some of the outputs.
 \par
 The input vector elements enter the network through the weight matrix $\mathbf{W}$:
-\begin{equation*}
+\begin{equation}
 \mathbf{W} = \begin{bmatrix}
 w_{1,1} & w_{1,2} & ... & w_{1,R} \\ 
 w_{2,1} & w_{2,2} & ... & w_{2,R} \\ 
  \vdots & \vdots & \ddots & \vdots \\ 
 w_{S,1} & w_{S,2} & ... & w_{S,R}\\ 
 \end{bmatrix}
-\end{equation*}
+\end{equation}
 
 Row indices of the elements of matrix $\mathbf{W}$ indicate the destination neuron associated with that weight, while the column indices indicate the source of the input for that weight. Thus, the indices in $w_{3,2}$ say that this weight represents the connection to the third neuron from the second source.
 
@@ -1846,7 +1776,7 @@ Row indices of the elements of matrix $\mathbf{W}$ indicate the destination neur
 Now consider a network with several layers. Each layer has its own weight matrix $\mathbf{W}$, its own bias vector $\mathbf{b}$, a net input vector $\mathbf{n}$ and an output vector $\mathbf{a}$. This is shown in the three-layer network shown in figure \ref{fig:three_layer_network}.
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=1\textwidth]
+	\includegraphics[width=0.85\textwidth]
 	{images/chapter4/three_layer_network}
 	\caption{three-layer network.}
 	\label{fig:three_layer_network}
@@ -1881,27 +1811,27 @@ A feed-forward network is a directed and weighted graph that contains no loops. 
 As shown in figure \ref{fig:forward-single}, a single layer feed-forward network consists of a single layer of  weights connected from the inputs to the outputs. In figure \ref{fig:forward-multi} there is a layer in between the input and output layers. The layers that are in this position are referred to as hidden layers that hold hidden neurons. These extra layers can provide extra computation on the data being processed by the neural network, allowing for more advanced functions to be performed. With both of these networks the data being processed can only travel in the direction of input to output, hence the term feed-forward network. The more popular option for feed-forward networks is the multi-layered structure. These networks have been found to generalize data very well, and often provide the correct output for an input that was not in the initial training set of data.
 
 \subsubsection{Recurrent Neural Network (Feed Forward With Back Propagation)}
-Learning in FFNN with back-propagation occurs during the training phase in which each input pattern from the training set is applied to the input layer and then propagates forward. The pattern of activation arriving at the output layer is then compared with the correct (associated) output pattern to calculate an error signal.  The error signal for each such target output pattern is then back propagated from the output layer to the input neurons in order to adjust the weights in each layer of the network as in figure \ref{fig:rnn}.
-
-\begin{equation*}
-W = X . \alpha . e
-\end{equation*}
-
-where:
-\begin{itemize}
-\item $W$, is the neuron weight.
-\item $X$, is the neuron input.
-\item $\alpha$, is the neuron learning rate.
-\item $e$, is the neuron error.
-\end{itemize}
-
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]
 	{images/chapter4/rnn}
 	\caption{recurrent neural network.}
 	\label{fig:rnn}
 \end{figure}
+
+Learning in FFNN with back-propagation occurs during the training phase in which each input pattern from the training set is applied to the input layer and then propagates forward. The pattern of activation arriving at the output layer is then compared with the correct (associated) output pattern to calculate an error signal.  The error signal for each such target output pattern is then back propagated from the output layer to the input neurons in order to adjust the weights in each layer of the network as in figure \ref{fig:rnn}.
+
+\begin{equation}
+W = X . \alpha . e
+\end{equation}
+
+where:
+\begin{itemize}[noitemsep]
+\item $W$ is the neuron weight,
+\item $X$ is the neuron input,
+\item $\alpha$ is the neuron learning rate,
+\item $e$ is the neuron error.
+\end{itemize}
 
 \section{Hidden Markov Model}
 \subsection{Discrete-Time Markov Model}
@@ -1911,36 +1841,36 @@ P(q_{t}=j|q_{t-1}=i|q_{t-2}=k,...)=P(q_{t}=j|q_{t-1}=i)
 \label{eq:markov-property}
 \end{equation}
 Also consider that the right hand of equation \ref{eq:markov-property} is independent of time, which leads to a set of state transitions probabilities, $a_{ij}$ , of the form
-\begin{equation*}
+\begin{equation}
 a_{ij}=P(q_{t}=j|q_{t-1}=i),\; 1<i,j<N
-\end{equation*}
+\end{equation}
 These state probabilities, $a_{ij}$, has the following properties (due to standard stochastic constrains):
-\begin{align*}
+\begin{align}
 a_{ij} &\geq 0 \; \forall \, j,i\\ 
 \sum_{j=1}^{N} a_{ij} &= 1 \; \forall \, i
-\end{align*}
+\end{align}
 The state transition probabilities for all states in a model can be described by a transition probability matrix:
-\begin{equation*}
+\begin{equation}
 A = \begin{bmatrix}
 a_{11} & a_{12} & \cdots & a_{1N} \\ 
 a_{21} & a_{22} & \cdots & a_{2N}\\ 
 \vdots & \vdots & \ddots & \vdots \\ 
 a_{N1} & a_{N2} & \cdots & a_{NN}
 \end{bmatrix}
-\end{equation*}
+\end{equation}
 The only thing remaining to describe the system is the initial state distribution vector (the probability to start in some state). And this vector is described by
-\begin{equation*}
+\begin{equation}
 \pi = \begin{bmatrix}
 \pi_1 \! = \! P(q_1 \! = \! 1) \\ 
 \pi_2 \! = \! P(q_1 \! = \! 2) \\ 
 \vdots \\ 
 \pi_N \! = \! P(q_1 \! = \! N)
 \end{bmatrix}
-\end{equation*}
+\end{equation}
 The stochastic property for the initial state distribution vector is
-\begin{equation*}
+\begin{equation}
 \sum_{i=1}^{N} \pi_i = 1
-\end{equation*}
+\end{equation}
 Where the $\pi_i$ is defined as: $\pi_i \! = \! P(q_1 \! = \! i), 1 \leq i \leq N$. These are the properties and equations for describing a Markov process. The Markov model can be described by $\mathbf{A}$ and $\mathbf{\pi}$. To set ideas of how the hidden Markov model works the so called urn and ball model will be presented.
 
 \subsection{The Urn and Ball Model}
@@ -2006,15 +1936,15 @@ Problem 1 is evaluation problem see figure \ref{fig:eval-prob}, i.e. given obser
 
 \subsubsection{Forward Algorithm for Evaluation Problem}
 We want to find $P(O|\lambda)$, given the observation sequence $O = O_1, O_2, O_3, \cdots, O_T$. The most straight forward way to find the solution is enumerating every possible state sequence of length $T$. Consider one such state sequence $Q = q_1, q_2, q_3, \cdots, q_T$ such that $q_1$ produces $O_1$ with some probability, $q_2$ produces $O_2$ with some probability and so on. So, using chain rule
-\begin{equation*}
+\begin{equation}
 P(O|\lambda) = \sum_{q_1,q_2,\cdots,q_T} \pi_{q_1} b_{q_1}(O_1) a_{q_1 q_2} b_{q_2}(O_2) \cdots a_{q_{T-1} q_T} b_{q_T}(O_T)
-\end{equation*}
+\end{equation}
 but the order of chain rule is $N^T$, since at every $t = 1, 2, \cdots , T$, there are $N$ possible states which can be reached. This is clearly and inefficient algorithm, to overcome this forward algorithm is used.
 \subsubsection{Forward Algorithm}
 Forward algorithm is a dynamic programming algorithm which uses forward variable $\alpha_t(i)$ defined as
-\begin{equation*}
+\begin{equation}
 \alpha_i(t) = P(O_1,O_2, \cdots,O_i, q_t = S_i|\lambda)
-\end{equation*}
+\end{equation}
 See example in figure \ref{fig:forward-eg}.
 \begin{figure}[!h]
 	\centering
@@ -2059,13 +1989,13 @@ The Gaussian, also known as the normal distribution, is a widely used model for 
 \end{figure}
 
 In the case of a single variable $x$, the Gaussian distribution can be written in the form
-\begin{equation*}
+\begin{equation}
 N(X|\mu,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{-1}{2\sigma^2}(X-\mu)^2}
-\end{equation*}
+\end{equation}
 For a D-dimensional vector $x$, the multivariate Gaussian distribution takes the form
-\begin{equation*}
+\begin{equation}
 N(X|\mu,\Sigma) = \frac{1}{\sqrt{(2\mu)^{D}|\Sigma|}}e^{\frac{-1}{2}(X-\mu)^T \Sigma^{-1}(X-\mu)}
-\end{equation*}
+\end{equation}
 where $\mu$ is a D-dimensional mean vector, $\Sigma$ is a $D \times D$ covariance matrix, and $|\Sigma|$ denotes the its determinant.
 \subsection{Mixtures of Gaussians}
 While the Gaussian distribution has some important analytical properties, it suffers from significant limitations when it comes to modelling real data sets. For example, in modeling human height data, height is typically modeled as a normal distribution for each gender with a mean of approximately 5'10" for males and 5'5" for females. Given only the height data and not the gender assignments for each data point, the distribution of all heights would follow the sum of two scaled (different variance) and shifted (different mean) normal distributions. A model making this assumption is an example of a \acrshort{gmm}, though in general, a \acrshort{gmm} may have more than two components. Estimating the parameters of the individual normal distribution components is a canonical problem in modeling data with \acrshort{gmm}s.
@@ -2101,9 +2031,9 @@ The parameters $\pi_k$ in equation \ref{eq:gauss-mix} are called mixing coeffici
 \label{eq:gauss-one}
 \end{equation}
 Also, the requirement that $p(x) \geq 0$, together with $N(x|\mu_k,\Sigma_k) \geq 0$, implies $\pi_k \geq 0$ for all $k$. Combining this with the condition in equation \ref{eq:gauss-one} we obtain
-\begin{equation*}
+\begin{equation}
 0 \ll \pi_k \ll 1
-\end{equation*}
+\end{equation}
 
 \begin{figure}[!h]
 	\centering
@@ -2114,9 +2044,9 @@ Also, the requirement that $p(x) \geq 0$, together with $N(x|\mu_k,\Sigma_k) \ge
 \end{figure}
 
 We therefore see that the mixing coefficients satisfy the requirements to be probabilities. From the sum and product rules, the marginal density is given by
-\begin{equation*}
+\begin{equation}
 p(x) = \sum_{k=1}^{K} p(k)p(x|k)
-\end{equation*}
+\end{equation}
 which is equivalent to equation \ref{eq:gauss-mix} in which it's considered $\pi_k = p(k)$ as the prior probability of picking the $k_{th}$ component, and the density $N(x|\mu_k,\Sigma_k) = p(x|k)$ as the probability of $x$ conditioned on $k$. later, an important role is played by the posterior probabilities $p(k |x)$, which are also known as responsibilities. From Bayes' theorem these are given by
 \begin{equation}
 \gamma_{(k)}(x) \equiv p(k|x) = \frac{p(k)p(x|k)}{p(x)} = \frac{\pi_k N(x|\mu_k,\Sigma_k)}{\sum_{j=1}^{K} \pi_j N(x|\mu_j,\Sigma_j)}
@@ -2134,9 +2064,9 @@ where $X = {x_1, \cdots, x_N}$. It's clear that the situation is now much more c
 An elegant and powerful method for finding maximum likelihood solutions for models with latent variables is called the \acrfull{em} algorithm. Initially, we shall motivate the EM algorithm by giving a relatively informal treatment in the context of the Gaussian mixture model.
 \par
 Let us begin by writing down the conditions that must be satisfied at a maximum of the likelihood function. Setting the derivatives of $\ln p(X |\pi, \mu, \Sigma)$ in equation \ref{eq:gmm-log-prob} with respect to the means $\mu_k$ of the Gaussian components to zero, as a result:
-\begin{equation*}
+\begin{equation}
 -\sum_{n=1}^{N}\frac{\pi_j N(x_n|\mu_j,\Sigma_j)}{\sum_{k}\pi_k N(x_k|\mu_k,\Sigma_k)} \Sigma_{j}^{-1}(X_n - \mu_j) = 0
-\end{equation*}
+\end{equation}
 giving,
 \begin{equation}
 \mu_j = \frac{\sum_{n=1}^{N}\gamma_j(X_n)X_n}{\sum_{n=1}^{N}\gamma_j(X_n)}
@@ -2195,13 +2125,13 @@ The time alignment of different utterances is the core problem for distance meas
 DTW algorithm in speech recognition system is implemented to calculate least distance between features of word uttered and reference templates. Corresponding to least value among calculated scores with each template, the word is detected. DTW finds the optimal alignment between two times series if one time series may be ``warped'' non-linearly by stretching or shrinking it along its time axis. The extent of matching between two time series is measured in terms of distance factor.
 \subsection{Theory of operation}
 Consider two sequences of feature vector in an n-dimensional space.
-\begin{equation*}
+\begin{equation}
 x = [x_1, x_2, \cdots, x_n] and y = [y_1, y_2, \cdots, y_n]
-\end{equation*}
+\end{equation}
 The two sequences are aligned on the sides of a grid, with one on the top and other on the left hand side. Both sequences start on the bottom left of the grid as shown in figure \ref{fig:dtw-global-dist}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]
+	\includegraphics[width=0.5\textwidth]
 	{images/chapter4/dtw-global-dist}
 	\caption{Global distance grid.}
 	\label{fig:dtw-global-dist}
@@ -2215,9 +2145,9 @@ In each cell, a distance measure is placed, comparing the corresponding elements
 The best match or alignment between these two sequences is the path through the grid, which minimizes the total distance between them, which is termed as Global distance. The overall distance (Global distance) is calculated by finding and going through all the possible routes through the grid, each one compute the overall distance.
 \par
 The global distance is the minimum of the sum of the distances (Euclidean distance) between the individual elements on the path. Global distance measure is obtained using a recursive formula. An example for obtaining a minimum and optimal path between two different series is shown in figure \ref{fig:dtw-optimal}.
-\begin{equation*}
+\begin{equation}
 \text{GD}_{xy} = \text{LD}_{xy} + \min(\text{GD}_{x-1y-1}, \text{GD}_{x-1y}, \text{GD}_{xy-1})
-\end{equation*}        
+\end{equation}        
 Here GD = Global Distance (overall distance), LD = Local Distance (Euclidean distance).
 \begin{figure}[H]
 	\centering
@@ -2283,7 +2213,7 @@ general case is shown in figure \ref{fig:dtw-general-case}
 
 
 \subsection*{References}
-\begin{enumerate}
+\begin{enumerate}[label=(\arabic*), noitemsep]
 \item Speech Recognition using Hidden Markov Model performance evaluation in noisy environment by Mikael Nilsson \& Marcus Ejnarsson
 \item Fundamentals of Speech Recognition, Lawrence Rabiner \& Biing-Hwang Juang, Englewood Cliffs NJ: PTR Prentice Hall (Signal Processing Series), c1993, ISBN 0-13-015157-2
 \item Hidden Markov models for speech recognition, X.D. Huang, Y. Ariki, M.A. Jack. Edinburgh: Edinburgh University Press, c1990
@@ -2466,32 +2396,39 @@ The functions of features extraction and classification are performed using the 
 \subsection{Feature Extraction Method}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.25\textwidth]
+	\includegraphics[]
 	{images/chapter5/dwt-features}
 	\caption{WLPC Feature extraction method.}
 	\label{fig:dwt-features}
 \end{figure}
 
 Before the stage of features extraction, the speech data are processed by a silence removing algorithm followed by the application of a pre-processed by applying the normalization on speech signals to make the signals comparable regardless of differences in magnitude.
-\par
+different wavelets sub-bands for the word “radio”.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]
+	{images/chapter5/dwt-radio}
+	\caption{LPC coefficients obtained from different wavelet sub bands of the word radio.}
+	\label{fig:dwt-radio}
+\end{figure}
+
 The DWT is used to extract additional features to guarantee higher recognition rate. In this system, DWT is applied at the stage of feature extraction, but these data are not proper for classifier due to a great amount of data length. Thus, we have to seek for a better representation for the speaker features.
-\par
-In this method, figure \ref{fig:dwt-features}, LPC is obtained from DWT Sub signals. The DWT at level three is generated for the whole signal at once without segmentation and then 50 LPC orders are obtained for each sub signals to be combined in one feature vector. The main advantage of such sophisticated feature method is to extract different LPC impact based on multi resolution of DWT capability.
-\par
-LPC orders sequence will contain distinguishable information as well as wavelet transform. Figure \ref{fig:dwt-lpc-orders} shows LPC orders calculated for DWT at depth 3 for three different utterances for the same person. We may notice that the feature vector extracted by DWT and LPC is appropriate for speaker recognition.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.6\textwidth]
 	{images/chapter5/dwt-lpc-orders}
-	\caption{LPC Orders calculated for DWT at depth 3 for 50 features vectors of the word 'TV' from five different speakers.}
+	\caption{comparison of features vector of the word ``radio'' (from three different speakers) and the word ``TV''.}
 	\label{fig:dwt-lpc-orders}
 \end{figure}
 
+In this method, figure \ref{fig:dwt-features}, LPC is obtained from DWT Sub signals. The DWT at level three is generated for the whole signal at once without segmentation and then 50 LPC orders are obtained for each sub signals to be combined in one feature vector. The main advantage of such sophisticated feature method is to extract different LPC impact based on multi resolution of DWT capability. Figure \ref{fig:dwt-radio} shows LPC coefficients calculated from 
+\par
+LPC orders sequence will contain distinguishable information as well as wavelet transform. Figure \ref{fig:dwt-lpc-orders} shows LPC orders calculated for DWT at depth 3 and LPC order 50 for the word ``radio'' from three different persons and the word ``TV''. We may notice that the feature vector extracted by DWT and LPC is appropriate for speaker recognition.
 \subsection{Classification}
 Classification for this system is done using nprtool in MATLAB. It requires a set of inputs and a corresponding set of outputs. All these, inputs and outputs, are the training datasets.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.75\textwidth]
+	\includegraphics[width=0.8\textwidth]
 	{images/chapter5/dtw-nprtool}
 	\caption{Data set division in nprtool.}
 	\label{fig:dtw-nprtool}
@@ -2547,7 +2484,7 @@ Nine            & 2\%               \\ \hline
 \textbf{Overall}            & \textbf{3.3\%}           \\ \hline
 \end{tabular}
 }{%
-	\caption{test 10 trials}%
+	\caption{testing results}%
 	\label{tab:nn-5-results}%
 }
 \end{floatrow}
@@ -2578,7 +2515,7 @@ Stop               & 1\%              \\ \hline
 \textbf{Overall}            & \textbf{0.4\%}           \\ \hline
 \end{tabular}
 }{%
-	\caption{test 10 trials}%
+	\caption{testing results}%
 	\label{tab:nn-6-results}%
 }
 \end{floatrow}
@@ -2595,7 +2532,7 @@ Stop               & 1\%              \\ \hline
 We note that the recognition rate is lower in words that begin with fricative sounds, like (Forward-Four-Five)or ending with plosives like (Stop- Eight) due to the difficulty of distinguishing plosives and fricatives  in noisy environment specially at the beginning and the end of an utterance.
 
 \subsubsection{Problems}
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 \item There are too many coefficients to be processed by the neural network and we overcame this problem by using LPC to reduce the number of coefficients.
 \item The accuracy of the system was low when we used high sampling frequency and we overcame this problem by increasing the number of coefficients.
 \item The accuracy of the system was very low when we used low order of the LPC then we increased the order to improve the performance.
@@ -2613,7 +2550,7 @@ The Back-propagation neural network is used as a classifier. The human voice is 
 Framing is necessary to analyze the speech. Speech is quasi-periodic signal, so analysis can be done by fragmenting the speech into small segments called chunks or frames. The frame work of speech recognition is shown in figure \ref{fig:nn-framework}.
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.55\textwidth]
+	\includegraphics[]
 	{images/chapter5/nn-framework}
 	\caption{Block diagram of speech recognition system.}
 	\label{fig:nn-framework}
@@ -2911,7 +2848,7 @@ For simple isolated word detection MFCC and DTW approach is enough and efficient
 \subsection{Methodology}
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.65\textwidth]
+	\includegraphics[]
 	{images/chapter5/dtw-blocks}
 	\caption{MFCC and DTW Block Diagram.}
 	\label{fig:dtw-blocks}
@@ -2972,9 +2909,9 @@ Recorded data set is split into two groups:
 \item Testing data set which is the rest.
 \end{itemize}
 Training and testing data sets are chosen randomly. After training of HMM models is finished, testing data sets are scored against the HMM models and accuracy is calculated as:
-\begin{equation*}
+\begin{equation}
 \text{accuracy} = \frac{\text{\# words correctly classified}}{\text{\# total words}} \times 100\%
-\end{equation*}
+\end{equation}
 
 \subsection{Data Sets}
 Two data sets were used to train and test the system, each set was used to train and test the system separately from the other, these sets are as follows:
@@ -3494,6 +3431,15 @@ The basic idea of this system is the ability of our code to recognize the number
 \subsection{Testing}
 \inputminted[linenos, numbersep=5pt, frame=single, breaklines=true, tabsize=2]
 {Python}{codes/hmm-test.py}
+
+\chapter{International Phonetic Alphabet}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]
+	{images/appendix-b/ipa}
+	\caption{International phonetic alphabet table}
+	\label{fig:hardware-6}
+\end{figure}
 
 \end{appendices}
 
